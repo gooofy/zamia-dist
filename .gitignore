@@ -64,6 +64,7 @@ debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
 debian-ai/libkaldi-asr/libkaldi-asr
 debian-ai/libkaldi-asr/opt
 
+debian-ai/python-marytts/py-marytts/
 debian-ai/python-marytts/python-marytts-*
 debian-ai/python-marytts/python-marytts_*
 
