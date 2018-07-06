@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO=${HOME}/repo/ai/raspbian/stretch/armhf
+REPO=${HOME}/repo/ai/debian/stretch/amd64
 
 rm -f ${REPO}/python*-espeakng*.deb
 
