@@ -1,0 +1,17 @@
+python-picotts (0.1.2-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 07 May 2018 22:37:11 +0100
+
+python-picotts (0.1.1-1) unstable; urgency=medium
+
+  * fix module name
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 16 Dec 2017 22:10:29 +0100
+
+python-picotts (0.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #0000)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 16 Dec 2017 00:32:34 +0100
