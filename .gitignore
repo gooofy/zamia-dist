@@ -82,3 +82,7 @@ debian-ai/python-kaldiasr/python-kaldiasr_*
 debian-ai/python-kaldiasr/test/
 debian-ai/python-kaldiasr/tmp/
 
+debian-ai/python-nltools/py-nltools/
+debian-ai/python-nltools/python-nltools-*
+debian-ai/python-nltools/python-nltools_*
+
