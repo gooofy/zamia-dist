@@ -1,0 +1,48 @@
+Source: python-kaldiasr
+Section: python
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools, python-numpy, python3-numpy, cython, cython3, libc6 (>= 2.4), libkaldi-asr (>= 5.2)
+Standards-Version: 3.9.8
+Homepage: https://github.com/gooofy/py-kaldi-asr
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-kaldi-asr.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-kaldi-asr.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-kaldiasr
+Architecture: any
+Depends: ${python:Depends}, ${misc:Depends}, libc6 (>= 2.4), libkaldi-asr (>= 5.2)
+Suggests: python-kaldiasr-doc
+Description: Simple kaldi-asr wrapper for Python 2
+ Some simple wrappers around kaldi-asr intended to make using kaldi's (online,
+ nnet3) decoders as convenient as possible. Target audience are developers who
+ would like to use kaldi-asr as-is for speech recognition in their application
+ on GNU/Linux operating systems.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-kaldiasr
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, libc6 (>= 2.4), libkaldi-asr (>= 5.2)
+Suggests: python-kaldiasr-doc
+Description: Simple kaldi-asr wrapper for Python 3
+ Some simple wrappers around kaldi-asr intended to make using kaldi's (online,
+ nnet3) decoders as convenient as possible. Target audience are developers who
+ would like to use kaldi-asr as-is for speech recognition in their application
+ on GNU/Linux operating systems.
+ .
+ This package installs the library for Python 3.
+
+Package: python-kaldiasr-doc
+Architecture: any
+Section: doc
+Depends: ${misc:Depends}
+Description: Simple kaldi-asr wrapper for Python (common documentation)
+ Some simple wrappers around kaldi-asr intended to make using kaldi's (online,
+ nnet3) decoders as convenient as possible. Target audience are developers who
+ would like to use kaldi-asr as-is for speech recognition in their application
+ on GNU/Linux operating systems.
+ .
+ This is the common documentation package.

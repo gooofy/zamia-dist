@@ -76,3 +76,9 @@ debian-ai/python-webrtcvad/py-webrtcvad/
 debian-ai/python-webrtcvad/python-webrtcvad-*
 debian-ai/python-webrtcvad/python-webrtcvad_*
 
+debian-ai/python-kaldiasr/py-kaldi-asr/
+debian-ai/python-kaldiasr/python-kaldiasr-*
+debian-ai/python-kaldiasr/python-kaldiasr_*
+debian-ai/python-kaldiasr/test/
+debian-ai/python-kaldiasr/tmp/
+
