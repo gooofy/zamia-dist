@@ -1,0 +1,23 @@
+python-webrtcvad (2.0.11-4) unstable; urgency=medium
+
+  * missing dependencies added
+
+ -- Guenter Bartsch <guenter@zamia.org>  Wed, 16 May 2018 22:39:50 +0100
+
+python-webrtcvad (2.0.11-3) unstable; urgency=medium
+
+  * missing dependencies added
+
+ -- Guenter Bartsch <guenter@zamia.org>  Wed, 16 May 2018 22:33:50 +0100
+
+python-webrtcvad (2.0.11-2) unstable; urgency=medium
+
+  * fix module name
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 17 Dec 2017 00:15:50 +0100
+
+python-webrtcvad (2.0.11-1) unstable; urgency=medium
+
+  * Initial release (Closes: #0000)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 16 Dec 2017 02:54:00 +0100

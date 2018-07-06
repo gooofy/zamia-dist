@@ -72,3 +72,7 @@ debian-ai/python-picotts/py-picotts/
 debian-ai/python-picotts/python-picotts-*
 debian-ai/python-picotts/python-picotts_*
 
+debian-ai/python-webrtcvad/py-webrtcvad/
+debian-ai/python-webrtcvad/python-webrtcvad-*
+debian-ai/python-webrtcvad/python-webrtcvad_*
+
