@@ -45,3 +45,7 @@ raspbian-ai/python-kaldiasr/py-kaldi-asr/
 raspbian-ai/python-kaldiasr/test/
 raspbian-ai/python-kaldiasr/tmp/
 
+raspbian-ai/python-nltools/py-nltools/
+raspbian-ai/python-nltools/python-nltools-*
+raspbian-ai/python-nltools/python-nltools_*
+

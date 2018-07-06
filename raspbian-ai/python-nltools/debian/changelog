@@ -1,0 +1,89 @@
+python-nltools (0.2.5-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Fri, 06 Jul 2018 12:21:19 +0200
+
+python-nltools (0.2.4-2) unstable; urgency=medium
+
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 02 Jul 2018 23:23:23 +0200
+
+python-nltools (0.2.4-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 02 Jul 2018 23:19:19 +0200
+
+python-nltools (0.2.3-2) unstable; urgency=medium
+
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 02 Jul 2018 23:13:29 +0200
+
+python-nltools (0.2.3-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 02 Jul 2018 22:58:09 +0200
+
+python-nltools (0.2.2-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 02 Jul 2018 19:04:11 +0200
+
+python-nltools (0.2.1-2) unstable; urgency=medium
+
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 01 Jul 2018 23:52:44 +0200
+
+python-nltools (0.2.1-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 01 Jul 2018 23:30:23 +0200
+
+python-nltools (0.2.0-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 01 Jul 2018 23:01:14 +0200
+
+python-nltools (0.1.8-2) unstable; urgency=medium
+
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 01 Jul 2018 13:36:23 +0200
+
+python-nltools (0.1.8-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 01 Jul 2018 13:22:23 +0200
+
+python-nltools (0.1.6-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 03 Jun 2018 11:56:48 +0200
+
+python-nltools (0.1.5-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 07 May 2018 21:35:56 +0100
+
+python-nltools (0.1.1-2) unstable; urgency=medium
+
+  * fix module name
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 17 Dec 2017 01:37:21 +0100
+
+python-nltools (0.1.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #0000)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 16 Dec 2017 02:25:06 +0100
