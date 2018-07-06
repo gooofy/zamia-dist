@@ -40,4 +40,8 @@ raspbian-ai/python-webrtcvad/py-webrtcvad/
 raspbian-ai/python-webrtcvad/python-webrtcvad-*
 raspbian-ai/python-webrtcvad/python-webrtcvad_*
 
+raspbian-ai/python-kaldiasr/old/
+raspbian-ai/python-kaldiasr/py-kaldi-asr/
+raspbian-ai/python-kaldiasr/test/
+raspbian-ai/python-kaldiasr/tmp/
 

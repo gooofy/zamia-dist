@@ -1,0 +1,72 @@
+python-kaldiasr (0.4.0-1) unstable; urgency=medium
+
+  * new upstream release (full Python 3 support)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 01 Jul 2018 12:10:25 +0200
+
+python-kaldiasr (0.3.3-4) unstable; urgency=medium
+
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 30 Jun 2018 13:58:24 +0200
+
+python-kaldiasr (0.3.3-3) unstable; urgency=medium
+
+  * included examples in doc package
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 30 Jun 2018 13:53:42 +0200
+
+python-kaldiasr (0.3.3-2) unstable; urgency=medium
+
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 30 Jun 2018 11:55:42 +0200
+
+python-kaldiasr (0.3.3-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 30 Jun 2018 11:25:42 +0200
+
+python-kaldiasr (0.3.1-2) unstable; urgency=medium
+
+  * rebuild
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 18 Jun 2018 22:04:35 +0200
+
+python-kaldiasr (0.3.1-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Thu, 14 Jun 2018 22:04:35 +0200
+
+python-kaldiasr (0.3.0-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 03 Jun 2018 11:11:12 +0200
+
+python-kaldiasr (0.2.5-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 07 May 2018 22:02:44 +0100
+
+python-kaldiasr (0.2.3-2) unstable; urgency=medium
+
+  * fix module name
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 17 Dec 2017 00:22:44 +0100
+
+python-kaldiasr (0.2.3-1.1) unstable; urgency=medium
+
+  * Python 3 compatibility fixes.
+
+ -- Guenter Bartsch <guenter@zamia.org>  Fri, 15 Dec 2017 21:17:27 +0100
+
+python-kaldiasr (0.2.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #0000)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Fri, 15 Dec 2017 19:02:33 +0100
