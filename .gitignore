@@ -23,3 +23,8 @@ raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-chain-zamia-speech-en/
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
 
+raspbian-ai/libkaldi-asr/libkaldi-asr/
+raspbian-ai/libkaldi-asr/old/
+raspbian-ai/libkaldi-asr/opt/
+raspbian-ai/libkaldi-asr/tmp/
+
