@@ -1,0 +1,19 @@
+Notes on signing:
+
+https://debian-handbook.info/browse/stable/sect.setup-apt-package-repository.html
+https://debian-handbook.info/browse/stable/sect.package-authentication.html
+https://debian-administration.org/article/717/Setting_up_a_personal_secure_apt_repository
+https://www.gnupg.org/gph/en/manual/x56.html
+
+generate key (without passphrase):
+
+$ gpg --gen-key
+
+export key
+
+$ gpg --armor --output bofh.asc --export guenter@zamia.org
+
+import key in apt:
+
+apt-key add < bofh.asc
+
