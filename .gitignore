@@ -68,3 +68,7 @@ debian-ai/python-marytts/py-marytts/
 debian-ai/python-marytts/python-marytts-*
 debian-ai/python-marytts/python-marytts_*
 
+debian-ai/python-picotts/py-picotts/
+debian-ai/python-picotts/python-picotts-*
+debian-ai/python-picotts/python-picotts_*
+

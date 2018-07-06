@@ -1,0 +1,48 @@
+Source: python-picotts
+Section: python
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools
+Standards-Version: 3.9.8
+Homepage: https://github.com/gooofy/py-picotts
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-picotts.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-picotts.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-picotts
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, libttspico-utils
+Suggests: python-picotts-doc
+Description: Some simple wrappers around SVOX Pico TTS (Python 2)
+ Some simple wrappers around SVOX Pico TTS intended to make using this TTS for
+ wave file generation as convenient as possible.
+ Target audience are developers who would like to use SVOX Pico TTS as-is for
+ speech synthesis in their Python application on GNU/Linux operating systems.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-picotts
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, libttspico-utils
+Suggests: python-picotts-doc
+Description: Some simple wrappers around SVOX Pico TTS (Python 3)
+ Some simple wrappers around SVOX Pico TTS intended to make using this TTS for
+ wave file generation as convenient as possible.
+ Target audience are developers who would like to use SVOX Pico TTS as-is for
+ speech synthesis in their Python application on GNU/Linux operating systems.
+ .
+ This package installs the library for Python 3.
+
+Package: python-picotts-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Some simple wrappers around SVOX Pico TTS
+ Some simple wrappers around SVOX Pico TTS intended to make using this TTS for
+ wave file generation as convenient as possible.
+ Target audience are developers who would like to use SVOX Pico TTS as-is for
+ speech synthesis in their Python application on GNU/Linux operating systems.
+ .
+ This is the common documentation package.
