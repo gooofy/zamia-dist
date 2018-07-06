@@ -90,3 +90,7 @@ debian-ai/python-nltools/py-nltools/
 debian-ai/python-nltools/python-nltools-*
 debian-ai/python-nltools/python-nltools_*
 
+debian-ai/python-num2words/num2words/
+debian-ai/python-num2words/python-num2words-*
+debian-ai/python-num2words/python-num2words_*
+

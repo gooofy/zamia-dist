@@ -1,0 +1,5 @@
+python-num2words (0.5.7-1) unstable; urgency=medium
+
+  * Initial release (Closes: #0000)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 07 Jul 2018 00:03:10 +0200
