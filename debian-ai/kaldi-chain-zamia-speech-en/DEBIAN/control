@@ -1,0 +1,9 @@
+Package: kaldi-chain-zamia-speech-en
+Version: VERSION
+Section: sound
+Priority: optional
+Architecture: amd64
+Depends: libc6 (>= 2.4), libatlas3-base (>= 3.10.3), zlib1g, python2.7, python3, libkaldi-asr
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Description: English speech recognition model for kaldi-asr from zamia-speech.org
+
