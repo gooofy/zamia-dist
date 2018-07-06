@@ -29,6 +29,9 @@ raspbian-ai/libkaldi-asr/opt/
 raspbian-ai/libkaldi-asr/tmp/
 
 raspbian-ai/python-picotts/py-picotts/
-raspbian-ai/python-picotts/python-picotts-0.1.2/
+raspbian-ai/python-picotts/python-picotts-*
 raspbian-ai/python-picotts/python-picotts_*
 
+raspbian-ai/python-marytts/py-marytts/
+raspbian-ai/python-marytts/python-marytts-*
+raspbian-ai/python-marytts/python-marytts_*
