@@ -49,3 +49,7 @@ raspbian-ai/python-nltools/py-nltools/
 raspbian-ai/python-nltools/python-nltools-*
 raspbian-ai/python-nltools/python-nltools_*
 
+debian-ai/python-espeakng/py-espeak-ng/
+debian-ai/python-espeakng/python-espeakng-*
+debian-ai/python-espeakng/python-espeakng_*
+

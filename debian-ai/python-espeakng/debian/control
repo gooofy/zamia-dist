@@ -1,0 +1,51 @@
+Source: python-espeakng
+Section: python
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools
+Standards-Version: 3.9.8
+Homepage: https://github.com/gooofy/py-espeak-ng
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-espeakng.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-espeakng.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-espeakng
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, espeak-ng, espeak-ng-data
+Suggests: python-python-espeakng-doc
+Description: Some simple wrappers around eSpeak NG (Python 2)
+ Some simple wrappers around eSpeak NG intended to make using this excellent TTS
+ for waveform and IPA generation as convenient as possible.
+ Target audience are developers who would like to use eSpeak NG as-is for speech
+ synthesis in their Python application on GNU/Linux operating systems.  <insert
+ long description, indented with spaces>
+ .
+ This package installs the library for Python 2.
+
+Package: python3-espeakng
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, espeak-ng, espeak-ng-data
+Suggests: python-python-espeakng-doc
+Description: Some simple wrappers around eSpeak NG (Python 3)
+ Some simple wrappers around eSpeak NG intended to make using this excellent TTS
+ for waveform and IPA generation as convenient as possible.
+ Target audience are developers who would like to use eSpeak NG as-is for speech
+ synthesis in their Python application on GNU/Linux operating systems.  <insert
+ long description, indented with spaces>
+ .
+ This package installs the library for Python 3.
+
+Package: python-espeakng-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Some simple wrappers around eSpeak NG
+ Some simple wrappers around eSpeak NG intended to make using this excellent TTS
+ for waveform and IPA generation as convenient as possible.
+ Target audience are developers who would like to use eSpeak NG as-is for speech
+ synthesis in their Python application on GNU/Linux operating systems.  <insert
+ long description, indented with spaces>
+ .
+ This is the common documentation package.
