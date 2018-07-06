@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.2.5
+VERSION=0.2.6
 PKGNAME=python-nltools
 GITNAME=py-nltools
 export DEBFULLNAME="Guenter Bartsch"
