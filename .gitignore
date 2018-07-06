@@ -61,3 +61,6 @@ debian-ai/kaldi-chain-zamia-speech-en/kaldi-chain-zamia-speech-en/
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
 
+debian-ai/libkaldi-asr/libkaldi-asr
+debian-ai/libkaldi-asr/opt
+
