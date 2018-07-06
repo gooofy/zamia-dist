@@ -53,3 +53,8 @@ debian-ai/python-espeakng/py-espeak-ng/
 debian-ai/python-espeakng/python-espeakng-*
 debian-ai/python-espeakng/python-espeakng_*
 
+debian-ai/kaldi-chain-zamia-speech-de/kaldi-chain-zamia-speech-de/
+debian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
+debian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
+
+
