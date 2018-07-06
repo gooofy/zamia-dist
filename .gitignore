@@ -3,6 +3,7 @@ syntax: glob
 *.swp
 *.swo
 *.pyc
+*.deb
 
 el7-armv7hl/
 el7-samba47/
@@ -13,4 +14,9 @@ el7/
 raspbian-ai/python-espeakng/py-espeak-ng/
 raspbian-ai/python-espeakng/python-espeakng*
 raspbian-ai/python-espeakng/python3-espeakng*
+
+raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-chain-zamia-speech-de/
+raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
+raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
+
 
