@@ -49,6 +49,10 @@ raspbian-ai/python-nltools/py-nltools/
 raspbian-ai/python-nltools/python-nltools-*
 raspbian-ai/python-nltools/python-nltools_*
 
+raspbian-ai/python-num2words/num2words/
+raspbian-ai/python-num2words/python-num2words-*
+raspbian-ai/python-num2words/python-num2words_*
+
 debian-ai/python-espeakng/py-espeak-ng/
 debian-ai/python-espeakng/python-espeakng-*
 debian-ai/python-espeakng/python-espeakng_*

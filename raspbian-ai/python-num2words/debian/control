@@ -1,0 +1,48 @@
+Source: python-num2words
+Section: python
+Priority: optional
+Maintainer: bofh <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools
+Standards-Version: 3.9.8
+Homepage: https://github.com/savoirfairelinux/num2words
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-num2words.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-num2words.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-num2words
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Suggests: python-num2words-doc
+Description: Modules to convert numbers to words. 42 --> forty-two (Python 2)
+ num2words is a library that converts numbers like 42 to words like forty-two.
+ It supports multiple languages (see the list below for full list of languages)
+ and can even generate ordinal numbers like forty-second (although this last
+ feature is a bit buggy for some languages at the moment).
+ .
+ This package installs the library for Python 2.
+
+Package: python3-num2words
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Suggests: python-num2words-doc
+Description: Modules to convert numbers to words. 42 --> forty-two (Python 3)
+ num2words is a library that converts numbers like 42 to words like forty-two.
+ It supports multiple languages (see the list below for full list of languages)
+ and can even generate ordinal numbers like forty-second (although this last
+ feature is a bit buggy for some languages at the moment).
+ .
+ This package installs the library for Python 3.
+
+Package: python-num2words-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Modules to convert numbers to words. 42 --> forty-two (common documentation)
+ num2words is a library that converts numbers like 42 to words like forty-two.
+ It supports multiple languages (see the list below for full list of languages)
+ and can even generate ordinal numbers like forty-second (although this last
+ feature is a bit buggy for some languages at the moment).
+ .
+ This is the common documentation package.
