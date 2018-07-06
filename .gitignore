@@ -35,3 +35,9 @@ raspbian-ai/python-picotts/python-picotts_*
 raspbian-ai/python-marytts/py-marytts/
 raspbian-ai/python-marytts/python-marytts-*
 raspbian-ai/python-marytts/python-marytts_*
+
+raspbian-ai/python-webrtcvad/py-webrtcvad/
+raspbian-ai/python-webrtcvad/python-webrtcvad-*
+raspbian-ai/python-webrtcvad/python-webrtcvad_*
+
+

@@ -1,0 +1,54 @@
+Source: python-webrtcvad
+Section: python
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools, python-memory-profiler, python3-memory-profiler
+Standards-Version: 3.9.8
+Homepage: https://github.com/wiseman/py-webrtcvad
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-webrtcvad.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-webrtcvad.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-webrtcvad
+Architecture: any
+Depends: ${python:Depends}, ${misc:Depends}, libwebrtc-audio-processing1, python-pkg-resources
+Suggests: python-webrtcvad-doc
+Description: python 2 interface to the WebRTC Voice Activity Detector
+ This is a python interface to the WebRTC Voice Activity Detector (VAD). It is
+ compatible with Python 2 and Python 3.
+ A VAD classifies a piece of audio data as being voiced or unvoiced. It can be
+ useful for telephony and speech recognition.
+ The VAD that Google developed for the WebRTC project is reportedly one of the
+ best available, being fast, modern and free.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-webrtcvad
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, libwebrtc-audio-processing1
+Suggests: python-webrtcvad-doc
+Description: python 3 interface to the WebRTC Voice Activity Detector
+ This is a python interface to the WebRTC Voice Activity Detector (VAD). It is
+ compatible with Python 2 and Python 3.
+ A VAD classifies a piece of audio data as being voiced or unvoiced. It can be
+ useful for telephony and speech recognition.
+ The VAD that Google developed for the WebRTC project is reportedly one of the
+ best available, being fast, modern and free.
+ .
+ This package installs the library for Python 3.
+
+Package: python-webrtcvad-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: python interface to the WebRTC Voice Activity Detector
+ This is a python interface to the WebRTC Voice Activity Detector (VAD). It is
+ compatible with Python 2 and Python 3.
+ A VAD classifies a piece of audio data as being voiced or unvoiced. It can be
+ useful for telephony and speech recognition.
+ The VAD that Google developed for the WebRTC project is reportedly one of the
+ best available, being fast, modern and free.
+ .
+ This is the common documentation package.
