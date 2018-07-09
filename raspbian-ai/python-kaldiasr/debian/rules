@@ -25,3 +25,6 @@ override_dh_installexamples:
 # 	mv debian/python3-chardet/usr/bin/chardetect \
 # 		debian/python3-chardet/usr/bin/chardetect3
 
+override_dh_installdocs:
+	dh_installdocs
+	dh_installdocs -ppython-kaldiasr-doc README.md
