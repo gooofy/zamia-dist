@@ -6,3 +6,10 @@ export PYBUILD_NAME=nltools
 %:
 	dh $@ --with python2,python3 --buildsystem=pybuild
 
+override_dh_installexamples:
+	dh_installexamples
+	dh_installexamples -ppython-nltools-doc examples/*.py
+
+override_dh_installdocs:
+	dh_installdocs
+	dh_installdocs -ppython-nltools-doc README.md

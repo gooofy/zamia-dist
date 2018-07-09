@@ -38,7 +38,7 @@ Description: A collection of basic python modules for spoken natural language pr
 
 Package: python3-nltools
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}, python3-webrtcvad, python3-requests, python3-espeakng, python3-marytts, python3-num2words
+Depends: ${python3:Depends}, ${misc:Depends}, python3-webrtcvad, python3-requests, python3-espeakng, python3-marytts, python3-num2words, python3-future
 Suggests: python-nltools-doc
 Description: A collection of basic python modules for spoken natural language processing (Python 3)
  A collection of abstraction layers and support functions that form the natural
