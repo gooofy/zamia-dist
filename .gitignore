@@ -96,3 +96,9 @@ debian-ai/python-num2words/num2words/
 debian-ai/python-num2words/python-num2words-*
 debian-ai/python-num2words/python-num2words_*
 
+centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
+centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
+centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
+centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
+
+
