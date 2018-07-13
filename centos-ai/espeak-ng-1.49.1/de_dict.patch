@@ -1,0 +1,11 @@
+diff --git a/dictsource/de_list b/dictsource/de_list
+index 610252f..2e882b6 100644
+--- a/dictsource/de_list
++++ b/dictsource/de_list
+@@ -783,3 +783,6 @@ Sri		sr,i:
+ Tom		tOm	$only
+ Tim		tIm	$only
+ 
++Ade         a:d'e:
++
++
