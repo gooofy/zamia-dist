@@ -1,0 +1,13 @@
+diff -ru XSB.1/build/configure XSB/build/configure
+--- XSB.1/build/configure	2017-12-28 01:10:17.130023702 +0100
++++ XSB/build/configure	2017-12-28 01:36:41.531291070 +0100
+@@ -2940,7 +2940,7 @@
+ 		    --disable-dwarf-debug | --disable-oracle-debug | --disable-profile | \
+ 		    --disable-batched-scheduling | --disable-batched | --disable-gc-test | --disable-demand | \
+ 		    --disable-mt | --disable-fast-floats | --disable-ccmpl | --disable-profiling | \
+-		    --disable-electric-fenct | --disable-optimization | --disable-jumptable )
++		    --disable-electric-fenct | --disable-optimization | --disable-jumptable | --disable-dependency-tracking )
+ 		    ;;
+ 		*)
+                     echo "configure: error: uncecognized option: $1"
+Only in XSB/build: .configure.swp
