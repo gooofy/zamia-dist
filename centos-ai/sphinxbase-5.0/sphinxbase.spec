@@ -1,19 +1,12 @@
 Name:           sphinxbase
-Version:        5.0prealpha
-Release:        2%{?dist}
+Version:        5.0
+Release:        20180714svn13291%{?dist}
 Summary:        Common library for CMU Sphinx voice recognition products
 
 Group:          Development/Libraries
 License:        BSD
 URL:            http://cmusphinx.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/cmusphinx/%{name}-%{version}.tar.gz
-# Sent upstream 28 Mar 2013.  Enable large file support.
-# Patch0:         %{name}-largefile.patch
-# Sent upstream 29 Mar 2013.  Fix an uninitialized variable that leads to bogus
-# lm scores.
-# Patch1:         %{name}-uninit.patch
-# Sent upstream 29 Mar 2013.  Fix broken doxygen comments.
-# Patch2:         %{name}-doxygen.patch
 
 BuildRequires:  bison
 BuildRequires:  Cython
