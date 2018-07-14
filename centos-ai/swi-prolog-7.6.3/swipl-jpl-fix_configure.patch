@@ -1,0 +1,11 @@
+--- pl-6.6.6/packages/jpl/configure	2014-05-28 06:33:54.000000000 -0300
++++ pl-6.6.6/packages/jpl/configure~	2014-10-19 16:58:55.084854827 -0200
+@@ -5619,7 +5619,7 @@
+ *)  case "$host_cpu" in
+ 	i?86)
+ 		_JNI_LIBDIRS="lib/i386"
+-		_JNI_LIBSUBDIRS="client"
++		_JNI_LIBSUBDIRS="server"
+ 		;;
+ 	x86_64)
+ 		_JNI_LIBDIRS="lib/amd64"

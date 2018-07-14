@@ -117,3 +117,6 @@ centos-ai/python-kaldiasr/py-kaldi-asr-*.tar.gz
 centos-ai/svox-pico-20160125/svox-pico-20160125.tar.xz
 centos-ai/svox-pico-20160125/svox-pico-20160125/
 
+centos-ai/swi-prolog-7.6.3/swi-prolog-7.2.3-4.mga6.src.rpm
+centos-ai/swi-prolog-7.6.3/swipl-7.6.3.tar.gz
+

@@ -1,0 +1,116 @@
+diff -uNpr pl-6.2.4-original/packages/xpce/src/ker/goodies.c pl-6.2.4-modified/packages/xpce/src/ker/goodies.c
+--- pl-6.2.4-original/packages/xpce/src/ker/goodies.c	2012-12-12 18:13:27.428028223 -0200
++++ pl-6.2.4-modified/packages/xpce/src/ker/goodies.c	2012-12-12 18:15:58.122031662 -0200
+@@ -845,83 +845,83 @@ scanstr(char *str, char *fmt, Any *r)
+   ar = vsscanf(str, fmt, (va_list) ptrs);
+ #else
+   switch(argn)
+-  { case 0:	ar = sscanf(str, fmt); break;
+-    case 1:	ar = sscanf(str, fmt, ptrs[0]); break;
+-    case 2:	ar = sscanf(str, fmt, ptrs[0], ptrs[1]); break;
+-    case 3:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2]);
++  { case 0:	ar = sscanf(str, "%s", fmt); break;
++    case 1:	ar = sscanf(str, "%s", fmt, ptrs[0]); break;
++    case 2:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1]); break;
++    case 3:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2]);
+ 				      break;
+-    case 4:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 4:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3]); break;
+-    case 5:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 5:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4]); break;
+-    case 6:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 6:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5]);
+ 				      break;
+-    case 7:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 7:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6]); break;
+-    case 8:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 8:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7]); break;
+-    case 9:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 9:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8]);
+ 				      break;
+-    case 10:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 10:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9]);
+ 				      break;
+-    case 11:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 11:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10]);
+ 				      break;
+-    case 12:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 12:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11]);
+ 				      break;
+-    case 13:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 13:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
+ 				      ptrs[12]);
+ 				      break;
+-    case 14:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 14:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
+ 				      ptrs[12], ptrs[13]);
+ 				      break;
+-    case 15:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 15:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
+ 				      ptrs[12], ptrs[13], ptrs[14]);
+ 				      break;
+-    case 16:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 16:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
+ 				      ptrs[12], ptrs[13], ptrs[14],
+ 				      ptrs[15]);
+ 				      break;
+-    case 17:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 17:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
+ 				      ptrs[12], ptrs[13], ptrs[14],
+ 				      ptrs[15], ptrs[16]);
+ 				      break;
+-    case 18:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 18:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
+ 				      ptrs[12], ptrs[13], ptrs[14],
+ 				      ptrs[15], ptrs[16], ptrs[17]);
+ 				      break;
+-    case 19:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 19:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
+@@ -929,7 +929,7 @@ scanstr(char *str, char *fmt, Any *r)
+ 				      ptrs[15], ptrs[16], ptrs[17],
+ 				      ptrs[18]);
+ 				      break;
+-    case 20:	ar = sscanf(str, fmt, ptrs[0], ptrs[1], ptrs[2],
++    case 20:	ar = sscanf(str, "%s", fmt, ptrs[0], ptrs[1], ptrs[2],
+ 			              ptrs[3], ptrs[4], ptrs[5],
+ 			              ptrs[6], ptrs[7], ptrs[8],
+ 				      ptrs[9], ptrs[10], ptrs[11],
