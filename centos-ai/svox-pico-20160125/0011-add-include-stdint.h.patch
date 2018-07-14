@@ -1,0 +1,44 @@
+diff -Nru a/pico/lib/picoapi.c b/pico/lib/picoapi.c
+--- a/pico/lib/picoapi.c	2016-07-11 14:44:54.000000000 +0200
++++ b/pico/lib/picoapi.c	2016-07-11 15:03:47.011935115 +0200
+@@ -22,6 +22,7 @@
+  * History:
+  * - 2009-04-20 -- initial version
+  */
++#include <stdint.h>
+ #include "picodefs.h"
+ #include "picoos.h"
+ #include "picodbg.h"
+diff -Nru a/pico/lib/picoctrl.c b/pico/lib/picoctrl.c
+--- a/pico/lib/picoctrl.c	2016-07-11 14:44:54.000000000 +0200
++++ b/pico/lib/picoctrl.c	2016-07-11 15:08:00.437731787 +0200
+@@ -26,6 +26,7 @@
+  *
+  */
+ 
++#include <stdint.h>
+ #include "picodefs.h"
+ #include "picoos.h"
+ #include "picodbg.h"
+diff -Nru a/pico/lib/picopr.c b/pico/lib/picopr.c
+--- a/pico/lib/picopr.c	2016-07-11 14:44:54.000000000 +0200
++++ b/pico/lib/picopr.c	2016-07-11 15:11:16.828630785 +0200
+@@ -26,6 +26,7 @@
+  *
+  */
+ 
++#include <stdint.h>
+ #include "picodefs.h"
+ #include "picoos.h"
+ #include "picobase.h"
+diff -Nru a/pico/lib/picorsrc.c b/pico/lib/picorsrc.c
+--- a/pico/lib/picorsrc.c	2016-07-11 14:44:54.000000000 +0200
++++ b/pico/lib/picorsrc.c	2016-07-11 15:09:42.625055391 +0200
+@@ -24,6 +24,7 @@
+  *
+  */
+ 
++#include <stdint.h>
+ #include "picodefs.h"
+ #include "picoos.h"
+ #include "picodbg.h"
