@@ -1,12 +1,23 @@
 #!/bin/sh
 
+VERSION=0.4.1
+
+rm -rf py-kaldi-asr-${VERSION} py-kaldi-asr-${VERSION}.tar.gz
+
+pushd py-kaldi-asr
+make clean README.md
+popd
+
+cp -r py-kaldi-asr py-kaldi-asr-${VERSION}
+tar cfvz py-kaldi-asr-${VERSION}.tar.gz py-kaldi-asr-${VERSION}
+
+rm -rf py-kaldi-asr-${VERSION}
+
 rm -rf ~/rpmbuild
 mkdir -p ~/rpmbuild/SOURCES
 cp * ~/rpmbuild/SOURCES
 
 rpmbuild -ba --clean python-kaldiasr.spec
 
-# cp ~/rpmbuild/RPMS/x86_64/*.rpm ~/repo/ai/centos/7/x86_64
-# cp ~/rpmbuild/RPMS/noarch/*.rpm ~/repo/ai/centos/7/x86_64
-# createrepo ~/repo/ai/centos/7/x86_64
-# rsync --delete -avzP ~/repo/ai/ guenter@goofy.zamia.org:/var/www/html/repo-ai/
+rm -f py-kaldi-asr-${VERSION}.tar.gz
+

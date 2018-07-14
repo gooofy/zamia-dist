@@ -41,7 +41,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           python-%{altname}
-Version:        0.3.1
+Version:        0.4.1
 Release:        1%{?dist}
 Summary:        Some simple wrappers around Kaldi ASR intended to make using it as convenient as possible. 
 

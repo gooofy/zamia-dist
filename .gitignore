@@ -112,7 +112,7 @@ centos-ai/python-espeak-ng/py-espeak-ng/
 centos-ai/python-espeak-ng/build.log
 
 centos-ai/python-kaldiasr/build.log
-centos-ai/python-kaldiasr/py-kaldi-asr-*.tar.gz
+centos-ai/python-kaldiasr/py-kaldi-asr/
 
 centos-ai/svox-pico-20160125/svox-pico-20160125.tar.xz
 centos-ai/svox-pico-20160125/svox-pico-20160125/
