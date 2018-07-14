@@ -42,7 +42,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 
 Name:           python-%{altname}
 Version:        0.3.0
-Release:        1%{?dist}
+Release:        3%{?dist}
 Summary:        A collection of basic python modules for spoken natural language processing
 
 License:        Apache-2
@@ -51,8 +51,15 @@ Source0:        https://files.pythonhosted.org/packages/5c/3c/59ca6ffa583687719b
 
 # BuildArch:      noarch
 
-%description
-%{summary}.
+Requires:       python-num2words
+Requires:       python-marytts
+Requires:       python-picotts
+Requires:       python-espeakng
+Requires:       pocketsphinx
+Requires:       python-kaldiasr
+Requires:       numpy
+Requires:       python-webrtcvad
+Requires:       python-setproctitle
 
 %{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
@@ -61,7 +68,8 @@ BuildRequires:  python-setuptools
 # BuildRequires:  python3-setuptools
 BuildRequires:  pytest
 
-Requires:       python-num2words, python-marytts, python-picotts, python-espeak-ng, pocketsphinx, python-kaldi-asr, numpy, python-webrtcvad, python-setproctitle
+%description
+%{summary}.
 
 %prep
 %autosetup -n py-nltools-%{version}
