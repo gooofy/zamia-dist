@@ -137,3 +137,6 @@ centos-ai/sphinxtrain-5.0/sphinxtrain
 centos-ai/python-picotts/py-picotts-*
 centos-ai/python-picotts/py-picotts/
 
+centos-ai/python-marytts/build.log
+centos-ai/python-marytts/py-marytts/
+
