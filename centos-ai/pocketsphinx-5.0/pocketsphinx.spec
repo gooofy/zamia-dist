@@ -1,6 +1,6 @@
 Name:           pocketsphinx
-Version:        5.0prealpha
-Release:        2%{?dist}
+Version:        5.0
+Release:        20180714svn13291%{?dist}
 Summary:        Real-time speech recognition
 
 Group:          Applications/Multimedia

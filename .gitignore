@@ -120,15 +120,15 @@ centos-ai/svox-pico-20160125/svox-pico-20160125/
 centos-ai/swi-prolog-7.6.3/swi-prolog-7.2.3-4.mga6.src.rpm
 centos-ai/swi-prolog-7.6.3/swipl-7.6.3.tar.gz
 
-centos-ai/pocketsphinx-5.0/pocketsphinx-5.0prealpha.tar.gz
-centos-ai/pocketsphinx-5.0/pocketsphinx-5.0prealpha/
+centos-ai/pocketsphinx-5.0/pocketsphinx/
 
-centos-ai/sphinxbase-5.0/sphinxbase-5.0prealpha.tar.gz
-centos-ai/sphinxbase-5.0/sphinxbase-5.0prealpha/
+centos-ai/sphinxbase-5.0/sphinxbase/
 
 centos-ai/openfst-1.6.7/openfst-1.6.7-1.fc28.src.rpm
 centos-ai/openfst-1.6.7/openfst-1.6.7.tar.gz
 
 centos-ai/opengrm-ngram-1.3.4/opengrm-ngram-1.3.4-2.fc28.src.rpm
 centos-ai/opengrm-ngram-1.3.4/opengrm-ngram-1.3.4.tar.gz
+
+centos-ai/cmusphinx-code/
 
