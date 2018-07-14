@@ -134,3 +134,6 @@ centos-ai/cmusphinx-code/
 
 centos-ai/sphinxtrain-5.0/sphinxtrain
 
+centos-ai/python-picotts/py-picotts-*
+centos-ai/python-picotts/py-picotts/
+
