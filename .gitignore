@@ -126,3 +126,6 @@ centos-ai/pocketsphinx-5.0/pocketsphinx-5.0prealpha/
 centos-ai/sphinxbase-5.0/sphinxbase-5.0prealpha.tar.gz
 centos-ai/sphinxbase-5.0/sphinxbase-5.0prealpha/
 
+centos-ai/openfst-1.6.7/openfst-1.6.7-1.fc28.src.rpm
+centos-ai/openfst-1.6.7/openfst-1.6.7.tar.gz
+
