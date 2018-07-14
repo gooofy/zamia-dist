@@ -111,3 +111,6 @@ centos-ai/kaldi-asr-5.3/kaldi-asr-bin-5.3.tar.gz
 centos-ai/python-espeak-ng/build.log
 centos-ai/python-espeak-ng/py-espeak-ng-*.tar.gz
 
+centos-ai/python-kaldiasr/build.log
+centos-ai/python-kaldiasr/py-kaldi-asr-*.tar.gz
+
