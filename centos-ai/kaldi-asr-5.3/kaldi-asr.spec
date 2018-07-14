@@ -1,6 +1,6 @@
 Name:		kaldi-asr
 Version:	5.3
-Release:	1%{?dist}
+Release:	2%{?dist}
 Group:		Applications/Multimedia
 License:	Apache License v 2.0
 Summary:	Kaldi Speech Recognition Toolkit
@@ -15,6 +15,22 @@ NoSource: 0
 Source1:    kaldi-asr.pc
 
 Requires:	atlas
+
+Provides: libkaldi-feat.so()(64bit)
+Provides: libkaldi-gmm.so()(64bit)
+Provides: libkaldi-hmm.so()(64bit)
+Provides: libkaldi-transform.so()(64bit)
+Provides: libkaldi-decoder.so()(64bit)
+Provides: libkaldi-matrix.so()(64bit)
+Provides: libkaldi-cudamatrix.so()(64bit)
+Provides: libkaldi-online2.so()(64bit)
+Provides: libkaldi-lat.so()(64bit)
+Provides: libkaldi-ivector.so()(64bit)
+Provides: libkaldi-util.so()(64bit)
+Provides: libkaldi-base.so()(64bit)
+Provides: libkaldi-tree.so()(64bit)
+Provides: libkaldi-nnet3.so()(64bit)
+Provides: libkaldi-fstext.so()(64bit)
 
 %description
 This package provides the Kaldi Speech Recognition Toolkit
@@ -256,6 +272,9 @@ echo "/opt/kaldi/tools/openfst/lib" >> $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.
 %{_sysconfdir}/ld.so.conf.d/kaldi-asr.conf
 
 %changelog
+* Sat Jul 14 2018 Guenter Bartsch <guenter@zamia.org> - 5.3-2
+- explicit provides
+
 * Fri Mar 30 2018 Guenter Bartsch <guenter@zamia.org> - 5.3-1
 - kaldi 5.3
 
