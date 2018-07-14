@@ -54,9 +54,7 @@ Source0:        https://files.pythonhosted.org/packages/1a/c2/08e5e705f80f4519da
 %description
 %{summary}.
 
-%package -n python2-%{altname}
-Summary:        %{summary}
-%{?python_provide:%python_provide python2-%{altname}}
+%{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 # BuildRequires:  python3-devel
@@ -65,15 +63,6 @@ BuildRequires:  pytest
 
 Requires:       svox-pico
 
-
-%description -n python2-%{altname}
-%{summary}.
-
-# %package -n python3-%{altname}
-# Summary: Kaldi ASR nnet3 chain decoder wrappers. Python 3 version.
-# 
-# %description -n python3-%{altname}
-# %{summary}.
 
 %prep
 %autosetup -n py-picotts-%{version}
@@ -90,7 +79,7 @@ Requires:       svox-pico
 py.test-%{python2_version} -v
 # py.test-%{python3_version} -v
 
-%files -n python2-%{altname}
+%files -n python-%{altname}
 # %license LICENSE
 # %doc HISTORY.rst README.rst
 %doc README.md

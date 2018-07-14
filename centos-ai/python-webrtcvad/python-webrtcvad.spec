@@ -54,23 +54,12 @@ Source0:        https://files.pythonhosted.org/packages/89/34/e2de2d97f3288512b9
 %description
 %{summary}.
 
-%package -n python2-%{altname}
-Summary:        %{summary}
-%{?python_provide:%python_provide python2-%{altname}}
+%{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 # BuildRequires:  python3-devel
 # BuildRequires:  python3-setuptools
 BuildRequires:  pytest
-
-%description -n python2-%{altname}
-%{summary}.
-
-# %package -n python3-%{altname}
-# Summary: Kaldi ASR nnet3 chain decoder wrappers. Python 3 version.
-# 
-# %description -n python3-%{altname}
-# %{summary}.
 
 %prep
 %autosetup -n webrtcvad-%{version}
@@ -87,7 +76,7 @@ BuildRequires:  pytest
 # py.test-%{python2_version} -v
 # py.test-%{python3_version} -v
 
-%files -n python2-%{altname}
+%files -n python-%{altname}
 %license LICENSE
 # %doc HISTORY.rst README.rst
 %doc README.rst
