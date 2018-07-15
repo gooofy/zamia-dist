@@ -1,7 +1,7 @@
 Summary:	    XSB is a Logic Programming and Deductive Database system for Unix and Windows. 
 Name:		    xsb
 Version:	    3.8.0
-Release:	    2%{?dist}
+Release:	    3%{?dist}
 License:	    LGPL
 Group:		    Development/Other
 
@@ -71,7 +71,7 @@ mkdir -p $RPM_BUILD_ROOT%{_mandir}/man1
 mv $RPM_BUILD_ROOT/opt/xsb/docs/userman/xsb.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %post
-find /opt/xsb-%{version} -name "*.xwam" -exec touch \{\} \;
+find /opt/xsb -name "*.xwam" -exec touch \{\} \;
 ldconfig
 
 %files
@@ -104,6 +104,8 @@ ldconfig
 %{_mandir}/*/xsb*
 
 %changelog
+* Sun Jul 15 2018 guenter <guenter@zamia.org> 3.8-3
+- fix xwam touch hack path
 * Sun Jul 15 2018 guenter <guenter@zamia.org> 3.8-2
 - /opt/xsb-3.8 -> /opt/xsb 
 * Thu Dec 28 2017 guenter <guenter@zamia.org> 3.8-1
