@@ -42,7 +42,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 
 Name:           python-%{altname}
 Version:        0.3.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python interface for XSB
 
 License:        Apache-2
@@ -51,8 +51,7 @@ Source0:        https://files.pythonhosted.org/packages/9d/b5/a8fa8bbba52948b0b1
 
 # BuildArch:      noarch
 
-%description
-%{summary}.
+Requires:       xsb
 
 %{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
@@ -61,8 +60,8 @@ BuildRequires:  python-setuptools
 # BuildRequires:  python3-setuptools
 BuildRequires:  pytest
 
-Requires:       xsb
-
+%description
+%{summary}.
 
 %prep
 %autosetup -n py-xsb-%{version}
@@ -92,5 +91,7 @@ py.test-%{python2_version} -v
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.3.2-2
+- fix dependencies
 * Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.3.2-1
 - Initial package
