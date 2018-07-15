@@ -42,7 +42,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 
 Name:           %{modname}
 Version:        0.1.1
-Release:        2%{?dist}
+Release:        4%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
 License:        Apache-2
@@ -53,6 +53,11 @@ Requires:       python-nltools
 Requires:       python-pyxsb
 Requires:       python-cmdln
 Requires:       pytz
+Requires:       python-sqlalchemy
+Requires:       python-six
+Requires:       python-tzlocal
+Requires:       scipy
+
 
 %{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
@@ -109,6 +114,8 @@ done
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-3
+- Dependency fixes
 * Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-2
 - Dependency fixes
 * Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-1
