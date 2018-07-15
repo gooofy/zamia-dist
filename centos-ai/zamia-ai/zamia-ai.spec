@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.1.0
-Release:        1%{?dist}
+Version:        0.1.1
+Release:        2%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
 License:        Apache-2
@@ -51,6 +51,8 @@ Source0:        zamia-ai-%{version}.tar.gz
 
 Requires:       python-nltools
 Requires:       python-pyxsb
+Requires:       python-cmdln
+Requires:       pytz
 
 %{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
@@ -107,5 +109,9 @@ done
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-2
+- Dependency fixes
+* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-1
+- Dependency fixes
 * Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.0-1
 - Initial package
