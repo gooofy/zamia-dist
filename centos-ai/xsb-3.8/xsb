@@ -1,4 +1,4 @@
 #!/bin/bash
 
-exec /opt/xsb-3.8.0/bin/xsb $@
+exec /opt/xsb/bin/xsb $@
 

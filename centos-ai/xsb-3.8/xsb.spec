@@ -1,7 +1,7 @@
 Summary:	    XSB is a Logic Programming and Deductive Database system for Unix and Windows. 
 Name:		    xsb
 Version:	    3.8.0
-Release:	    1%{?dist}
+Release:	    2%{?dist}
 License:	    LGPL
 Group:		    Development/Other
 
@@ -50,25 +50,25 @@ popd
 %install
 # %make_install
 # %makeinstall_std
-mkdir -p $RPM_BUILD_ROOT/opt/xsb-%{version}
-cp -rp * $RPM_BUILD_ROOT/opt/xsb-%{version}
-rm $RPM_BUILD_ROOT/opt/xsb-%{version}/FAQ
-rm $RPM_BUILD_ROOT/opt/xsb-%{version}/LICENSE
-rm $RPM_BUILD_ROOT/opt/xsb-%{version}/README
+mkdir -p $RPM_BUILD_ROOT/opt/xsb
+cp -rp * $RPM_BUILD_ROOT/opt/xsb
+rm $RPM_BUILD_ROOT/opt/xsb/FAQ
+rm $RPM_BUILD_ROOT/opt/xsb/LICENSE
+rm $RPM_BUILD_ROOT/opt/xsb/README
 
-sed -i "s^$RPM_BUILD_ROOT^^g" $RPM_BUILD_ROOT/opt/xsb-%{version}/config/*/emuMakefile
-sed -i "s^$RPM_BUILD_ROOT^^g" $RPM_BUILD_ROOT/opt/xsb-%{version}/config/*/topMakefile
-sed -i "s^$RPM_BUILD_ROOT^^g" $RPM_BUILD_ROOT/opt/xsb-%{version}/config/*/lib/xsb_configuration.P
+sed -i "s^$RPM_BUILD_ROOT^^g" $RPM_BUILD_ROOT/opt/xsb/config/*/emuMakefile
+sed -i "s^$RPM_BUILD_ROOT^^g" $RPM_BUILD_ROOT/opt/xsb/config/*/topMakefile
+sed -i "s^$RPM_BUILD_ROOT^^g" $RPM_BUILD_ROOT/opt/xsb/config/*/lib/xsb_configuration.P
 
 mkdir -p $RPM_BUILD_ROOT%{_bindir}
 cp %{SOURCE1} $RPM_BUILD_ROOT%{_bindir}
 
 mkdir -p $RPM_BUILD_ROOT%{_libdir}
-mv $RPM_BUILD_ROOT/opt/xsb-%{version}/emu/libxsb.so $RPM_BUILD_ROOT%{_libdir}
-rm $RPM_BUILD_ROOT/opt/xsb-%{version}/config/*/bin/libxsb.so
+mv $RPM_BUILD_ROOT/opt/xsb/emu/libxsb.so $RPM_BUILD_ROOT%{_libdir}
+rm $RPM_BUILD_ROOT/opt/xsb/config/*/bin/libxsb.so
 
 mkdir -p $RPM_BUILD_ROOT%{_mandir}/man1
-mv $RPM_BUILD_ROOT/opt/xsb-%{version}/docs/userman/xsb.1 $RPM_BUILD_ROOT%{_mandir}/man1
+mv $RPM_BUILD_ROOT/opt/xsb/docs/userman/xsb.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %post
 find /opt/xsb-%{version} -name "*.xwam" -exec touch \{\} \;
@@ -79,44 +79,33 @@ ldconfig
 %{_bindir}/xsb
 %{_libdir}/libxsb.so
 # %{_libdir}/pkgconfig/swipl.pc
-%exclude /opt/xsb-%{version}/docs
-/opt/xsb-%{version}/admin
-/opt/xsb-%{version}/bin
-/opt/xsb-%{version}/build
-/opt/xsb-%{version}/cmplib
-/opt/xsb-%{version}/config
-/opt/xsb-%{version}/emu
-/opt/xsb-%{version}/etc
-/opt/xsb-%{version}/examples
-/opt/xsb-%{version}/gpp
-/opt/xsb-%{version}/installer
-/opt/xsb-%{version}/InstallXSB.jar
-/opt/xsb-%{version}/lib
-/opt/xsb-%{version}/Makefile
-/opt/xsb-%{version}/packages
-/opt/xsb-%{version}/prolog-commons
-/opt/xsb-%{version}/prolog_includes
-/opt/xsb-%{version}/site
-/opt/xsb-%{version}/syslib
-
-# %doc %{_libdir}/swipl-%{version}/doc/Manual/*xpce.html
-# %{_bindir}/xpce*
-# %{_libdir}/swipl-%{version}/xpce/*
-# %doc packages/jpl/README.html
-# %doc %{_libdir}/swipl-%{version}/doc/packages/examples/jpl
-# %doc %{_libdir}/swipl-%{version}/doc/packages/jpl
-# %{_libdir}/swipl-%{version}/lib/*/libjpl.so
-# %{_libdir}/swipl-%{version}/lib/jpl.jar
-# %{_libdir}/swipl-%{version}/library/jpl.pl
-# %doc %{_libdir}/swipl-%{version}/doc/packages/odbc.html
-# %{_libdir}/swipl-%{version}/lib/*/odbc4pl.so
-# %{_libdir}/swipl-%{version}/library/odbc.pl
+%exclude /opt/xsb/docs
+/opt/xsb/admin
+/opt/xsb/bin
+/opt/xsb/build
+/opt/xsb/cmplib
+/opt/xsb/config
+/opt/xsb/emu
+/opt/xsb/etc
+/opt/xsb/examples
+/opt/xsb/gpp
+/opt/xsb/installer
+/opt/xsb/InstallXSB.jar
+/opt/xsb/lib
+/opt/xsb/Makefile
+/opt/xsb/packages
+/opt/xsb/prolog-commons
+/opt/xsb/prolog_includes
+/opt/xsb/site
+/opt/xsb/syslib
 
 %files doc
-%doc /opt/xsb-%{version}/docs
+%doc /opt/xsb/docs
 %{_mandir}/*/xsb*
 
 %changelog
+* Sun Jul 15 2018 guenter <guenter@zamia.org> 3.8-2
+- /opt/xsb-3.8 -> /opt/xsb 
 * Thu Dec 28 2017 guenter <guenter@zamia.org> 3.8-1
 - Initial package for CentOS 7 
 
