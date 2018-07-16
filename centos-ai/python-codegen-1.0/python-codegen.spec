@@ -34,45 +34,37 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 # CFLAGS="%{optflags}" %{__python3} %{py_setup} %{?py_setup_args} install -O1 --skip-build --root %{buildroot} %{?1}\
 # }
 
-%global modname zamia-ai
-%global altname zamiaai
-%global eggname zamia_ai
+%global modname codegen
+%global altname codegen
+%global eggname codegen
 
 %global _docdir_fmt %{name}
 
-Name:           %{modname}
-Version:        0.1.1
-Release:        5%{?dist}
-Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
+Name:           python-%{altname}
+Version:        1.0
+Release:        1%{?dist}
+Summary:        Extension to ast that allow ast -> python code generation.
 
-License:        Apache-2
-URL:            http://zamia-ai.org
-Source0:        zamia-ai-%{version}.tar.gz
+License:        BSD
+URL:            https://%{modname}.readthedocs.io
+Source0:        https://files.pythonhosted.org/packages/7e/9c/91b9b9c0c67aec57aabcf7c456baca687cdafd3fb29c6195574685b6ca36/codegen-%{version}.tar.gz
+Source1:        README.md
 
-Requires:       python-nltools
-Requires:       python-pyxsb
-Requires:       python-cmdln
-Requires:       pytz
-Requires:       python-sqlalchemy
-Requires:       python-six
-Requires:       python-tzlocal
-Requires:       python-codegen
-Requires:       scipy
+# BuildArch:      noarch
 
-
+Summary:        %{summary}
 %{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 # BuildRequires:  python3-devel
 # BuildRequires:  python3-setuptools
 BuildRequires:  pytest
-BuildRequires:  xsb
 
 %description
 %{summary}.
 
 %prep
-%autosetup -n zamia-ai-%{version}
+%autosetup -n codegen-%{version}
 
 %build
 %py2_build
@@ -81,33 +73,18 @@ BuildRequires:  xsb
 %install
 %py2_install
 # %py3_install
-
-pwd
-ls
-
-for M in %{buildroot}%{_datadir}/zamia-ai/modules/* ; do
-    pushd $M
-
-    for i in *.pl ; do 
-        bn=`basename ${i} .pl`
-        xsb -e "[${bn}]." < /dev/null
-    done
-
-    popd
-done
+cp -p %{SOURCE1} .
 
 %check
-# py.test-%{python2_version} -v
+py.test-%{python2_version} -v
 # py.test-%{python3_version} -v
 
-%files -n %{modname}
+%files -n python-%{altname}
 # %license LICENSE
 # %doc HISTORY.rst README.rst
 %doc README.md
 %{python2_sitelib}/%{eggname}-*.egg-info
-%{python2_sitelib}/%{altname}/
-%{_datadir}/zamia-ai
-%{_bindir}/zaicli
+%{python2_sitelib}/%{altname}.*
 
 # %files -n python3-%{altname}
 # %doc README.md
@@ -115,13 +92,5 @@ done
 # %{python3_sitearch}/%{altname}/
 
 %changelog
-* Mon Jul 16 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-5
-- Dependency fixes
-* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-3
-- Dependency fixes
-* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-2
-- Dependency fixes
-* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-1
-- Dependency fixes
-* Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.0-1
+* Mon Jul 16 2018 Guenter Bartsch <guenter@zamia.org> - 1.0-1
 - Initial package
