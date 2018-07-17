@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.1.1
-Release:        5%{?dist}
+Version:        0.2.0
+Release:        1%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
 License:        Apache-2
@@ -78,14 +78,10 @@ BuildRequires:  xsb
 %py2_build
 # %py3_build
 
-%install
-%py2_install
-# %py3_install
-
 pwd
 ls
 
-for M in %{buildroot}%{_datadir}/zamia-ai/modules/* ; do
+for M in zamiaai/skills/* ; do
     pushd $M
 
     for i in *.pl ; do 
@@ -95,6 +91,12 @@ for M in %{buildroot}%{_datadir}/zamia-ai/modules/* ; do
 
     popd
 done
+
+%install
+%py2_install
+# %py3_install
+
+# exit 1
 
 %check
 # py.test-%{python2_version} -v
@@ -106,7 +108,7 @@ done
 %doc README.md
 %{python2_sitelib}/%{eggname}-*.egg-info
 %{python2_sitelib}/%{altname}/
-%{_datadir}/zamia-ai
+# %{_datadir}/zamia-ai
 %{_bindir}/zaicli
 
 # %files -n python3-%{altname}
@@ -115,6 +117,8 @@ done
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Tue Jul 17 2018 Guenter Bartsch <guenter@zamia.org> - 0.2.0-1
+- New upstream version
 * Mon Jul 16 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-5
 - Dependency fixes
 * Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-3
