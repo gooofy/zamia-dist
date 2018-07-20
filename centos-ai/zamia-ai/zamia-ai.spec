@@ -42,7 +42,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 
 Name:           %{modname}
 Version:        0.2.0
-Release:        1%{?dist}
+Release:        4%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
 License:        Apache-2
@@ -85,8 +85,11 @@ for M in zamiaai/skills/* ; do
     pushd $M
 
     for i in *.pl ; do 
-        bn=`basename ${i} .pl`
-        xsb -e "[${bn}]." < /dev/null
+        if [ -e ${i} ] ; then
+            bn=`basename ${i} .pl`
+            # xsb -e "[${bn}]." < /dev/null
+            xsb -e "compile('${i}')." < /dev/null
+        fi
     done
 
     popd
@@ -96,7 +99,12 @@ done
 %py2_install
 # %py3_install
 
-# exit 1
+pushd zamiaai
+for M in skills/* ; do
+    # find ${M} -name "*.xwam" -exec cp \{\} %{buildroot}/%{python2_sitelib}/%{altname}/${M}/ \;
+    cp -a ${M}/*.xwam %{buildroot}/%{python2_sitelib}/%{altname}/${M}/  2>/dev/null || true
+done
+popd
 
 %check
 # py.test-%{python2_version} -v
@@ -117,6 +125,8 @@ done
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Tue Jul 17 2018 Guenter Bartsch <guenter@zamia.org> - 0.2.0-2
+- add missing xwam files
 * Tue Jul 17 2018 Guenter Bartsch <guenter@zamia.org> - 0.2.0-1
 - New upstream version
 * Mon Jul 16 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-5
