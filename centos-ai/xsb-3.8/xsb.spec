@@ -1,7 +1,7 @@
 Summary:	    XSB is a Logic Programming and Deductive Database system for Unix and Windows. 
 Name:		    xsb
 Version:	    3.8.0
-Release:	    3%{?dist}
+Release:	    5%{?dist}
 License:	    LGPL
 Group:		    Development/Other
 
@@ -46,6 +46,31 @@ pushd build
 ./makexsb dynmodule
 # %make_build
 popd
+
+pushd packages
+
+for i in *.P ; do 
+    if [ -e ${i} ] ; then
+        xsb -e "compile('${i}')." < /dev/null
+    fi
+done
+popd
+
+for M in packages/* ; do
+
+    if [ -d ${M} ] ; then
+
+        pushd $M
+
+        for i in *.P ; do 
+            if [ -e ${i} ] ; then
+                xsb -e "compile('${i}')." < /dev/null
+            fi
+        done
+
+        popd
+    fi
+done
 
 %install
 # %make_install
