@@ -107,6 +107,8 @@ centos-ai/xsb-3.8/XSB38.tar.gz
 
 centos-ai/espeak-ng-1.49.1/1.49.1.tar.gz
 centos-ai/kaldi-asr-5.3/kaldi-asr-bin-5.3.tar.gz
+centos-ai/kaldi-asr/build.log
+centos-ai/kaldi-asr/kaldi
 
 centos-ai/python-espeak-ng/py-espeak-ng/
 centos-ai/python-espeak-ng/build.log
