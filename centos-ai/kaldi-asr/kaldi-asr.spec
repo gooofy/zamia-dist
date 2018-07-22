@@ -291,6 +291,7 @@ echo "/opt/kaldi/tools/openfst/lib" >> $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.
 /opt/kaldi/src/nnet2/libkaldi-nnet2.so
 /opt/kaldi/src/nnet3/libkaldi-nnet3.so
 /opt/kaldi/src/online2/libkaldi-online2.so
+/opt/kaldi/src/rnnlm/libkaldi-rnnlm.so
 /opt/kaldi/src/sgmm2/libkaldi-sgmm2.so
 /opt/kaldi/src/transform/libkaldi-transform.so
 /opt/kaldi/src/tree/libkaldi-tree.so
