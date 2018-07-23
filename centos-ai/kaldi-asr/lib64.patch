@@ -1,0 +1,20 @@
+diff --git a/src/configure b/src/configure
+index 2f506b9..c13a0bb 100755
+--- a/src/configure
++++ b/src/configure
+@@ -1102,8 +1102,13 @@ else
+     OPENFSTLIBS="$FSTROOT/lib/libfst.dylib"
+     OPENFSTLDFLAGS="-Wl,-rpath -Wl,${FSTROOT}/lib"
+   elif [ "`uname`" == "Linux" ]; then
+-    OPENFSTLIBS="$FSTROOT/lib/libfst.so"
+-    OPENFSTLDFLAGS="-Wl,-rpath=${FSTROOT}/lib"
++    if [ -f "$FSTROOT/lib64/libfst.so" ] ; then
++        OPENFSTLIBS="$FSTROOT/lib64/libfst.so"
++        OPENFSTLDFLAGS="-Wl,-rpath=${FSTROOT}/lib64"
++    else
++        OPENFSTLIBS="$FSTROOT/lib/libfst.so"
++        OPENFSTLDFLAGS="-Wl,-rpath=${FSTROOT}/lib"
++    fi
+   else
+     failure "Dynamic libraries are not supported on this platform.
+              Run configure with --static --static-fst flag."

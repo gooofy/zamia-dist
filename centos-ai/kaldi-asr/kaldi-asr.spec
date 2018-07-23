@@ -1,6 +1,6 @@
 Name:		kaldi-asr
 Version:	5.4
-Release:	1.20180722gita639dd2%{?dist}
+Release:	2.20180722gita639dd2%{?dist}
 Group:		Applications/Multimedia
 License:	Apache License v 2.0
 Summary:	Kaldi Speech Recognition Toolkit
@@ -11,14 +11,17 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-build-%(%{__id_u} -n)
 # Sources.
 Source0:    %{name}-%{version}.tar.gz
 Source1:    kaldi-asr.pc
+Patch0:     lib64.patch
 
 BuildRequires: zlib-devel
 BuildRequires: libtool
 BuildRequires: subversion
 BuildRequires: gawk
 BuildRequires: python
+BuildRequires: openfst-devel
 
 Requires:	atlas
+Requires:	openfst
 
 # Provides: libkaldi-feat.so()(64bit)
 # Provides: libkaldi-gmm.so()(64bit)
@@ -48,18 +51,19 @@ This package provides the Kaldi Speech Recognition Toolkit
 
 %prep
 %setup -q
+%patch0 -p1
 
 # %setup -q -c -T
 # tar xfz %{SOURCE0} 
 
 %build
 
-pushd tools
-make %{?_smp_mflags}
-popd
+# pushd tools
+# make %{?_smp_mflags}
+# popd
 
 pushd src
-./configure --shared
+./configure --shared --fst-root=/usr --fst-version=1.6.7
 make depend %{?_smp_mflags}
 make %{?_smp_mflags}
 popd
@@ -219,12 +223,12 @@ popd
 %{__install} -p -m 0644 COPYING INSTALL README.md $RPM_BUILD_ROOT/opt/kaldi/
 %{__install} -p -m 0644 src/INSTALL src/NOTES src/TODO $RPM_BUILD_ROOT/opt/kaldi/src/
 
-# openfst
-
-%{__mkdir_p} $RPM_BUILD_ROOT/opt/kaldi/tools/openfst
-
-cp -rp tools/openfst/include $RPM_BUILD_ROOT/opt/kaldi/tools/openfst/
-cp -rp tools/openfst/lib $RPM_BUILD_ROOT/opt/kaldi/tools/openfst/
+# # openfst
+# 
+# %{__mkdir_p} $RPM_BUILD_ROOT/opt/kaldi/tools/openfst
+# 
+# cp -rp tools/openfst/include $RPM_BUILD_ROOT/opt/kaldi/tools/openfst/
+# cp -rp tools/openfst/lib $RPM_BUILD_ROOT/opt/kaldi/tools/openfst/
 
 # egs
 
@@ -250,7 +254,7 @@ done
 # ld.so.conf.d
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d
 echo "/opt/kaldi/src/lib" > $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d/kaldi-asr.conf
-echo "/opt/kaldi/tools/openfst/lib" >> $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d/kaldi-asr.conf
+# echo "/opt/kaldi/tools/openfst/lib" >> $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d/kaldi-asr.conf
 
 %clean
 %{__rm} -rf $RPM_BUILD_ROOT
@@ -332,10 +336,10 @@ echo "/opt/kaldi/tools/openfst/lib" >> $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.
 
 %{_libdir}/pkgconfig/kaldi-asr.pc
 
-# openfst
-
-/opt/kaldi/tools/openfst/include/*
-/opt/kaldi/tools/openfst/lib/*
+# # openfst
+# 
+# /opt/kaldi/tools/openfst/include/*
+# /opt/kaldi/tools/openfst/lib/*
 
 # egs
 
@@ -367,6 +371,9 @@ echo "/opt/kaldi/tools/openfst/lib" >> $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.
 %{_sysconfdir}/ld.so.conf.d/kaldi-asr.conf
 
 %changelog
+* Sun Jul 22 2018 Guenter Bartsch <guenter@zamia.org> - 5.4-2
+- use system-wide openfst
+
 * Sun Jul 22 2018 Guenter Bartsch <guenter@zamia.org> - 5.4-1
 - first attempt to build from source
 
