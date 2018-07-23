@@ -1,6 +1,0 @@
-This is a pretty crude attempt at creating binary-only RPMs of kaldi-asr.
-
-(1/3) check out and build kaldi-asr in /opt/kaldi (exactly there, nowhere else, otherwise paths will not match up)
-(2/3) ./create-bin-tarball.sh
-(3/3) ./doit.sh
-
