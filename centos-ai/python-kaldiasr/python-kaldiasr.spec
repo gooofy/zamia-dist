@@ -42,7 +42,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 
 Name:           python-%{altname}
 Version:        0.4.1
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Some simple wrappers around Kaldi ASR intended to make using it as convenient as possible. 
 
 License:        Apache-2
