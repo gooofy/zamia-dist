@@ -1,0 +1,4 @@
+Name: openfst
+Description: Weighted finite-state transducer library
+Version: 1.6.7
+Libs: -lfst

@@ -1,6 +1,6 @@
 Name:		kaldi-asr
 Version:	5.4
-Release:	2.20180722gita639dd2%{?dist}
+Release:	3.20180722gita639dd2%{?dist}
 Group:		Applications/Multimedia
 License:	Apache License v 2.0
 Summary:	Kaldi Speech Recognition Toolkit
@@ -23,54 +23,28 @@ BuildRequires: openfst-devel
 Requires:	atlas
 Requires:	openfst
 
-# Provides: libkaldi-feat.so()(64bit)
-# Provides: libkaldi-gmm.so()(64bit)
-# Provides: libkaldi-hmm.so()(64bit)
-# Provides: libkaldi-transform.so()(64bit)
-# Provides: libkaldi-decoder.so()(64bit)
-# Provides: libkaldi-matrix.so()(64bit)
-# Provides: libkaldi-cudamatrix.so()(64bit)
-# Provides: libkaldi-online2.so()(64bit)
-# Provides: libkaldi-lat.so()(64bit)
-# Provides: libkaldi-ivector.so()(64bit)
-# Provides: libkaldi-util.so()(64bit)
-# Provides: libkaldi-base.so()(64bit)
-# Provides: libkaldi-tree.so()(64bit)
-# Provides: libkaldi-nnet3.so()(64bit)
-# Provides: libkaldi-fstext.so()(64bit)
-# Provides: libkaldi-nnet2.so()(64bit)
-# Provides: libkaldi-nnet.so()(64bit)
-# Provides: libkaldi-rnnlm.so()(64bit)
-# Provides: libkaldi-kws.so()(64bit)
-# Provides: libkaldi-chain.so()(64bit)
-# Provides: libkaldi-lm.so()(64bit)
-# Provides: libkaldi-sgmm2.so()(64bit)
-
 %description
 This package provides the Kaldi Speech Recognition Toolkit
+
+%package devel
+Summary:        Development files for Kaldi ASR
+Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+%description devel
+This package includes the necessary files to develop systems with
+Kaldi ASR.
 
 %prep
 %setup -q
 %patch0 -p1
 
-# %setup -q -c -T
-# tar xfz %{SOURCE0} 
-
 %build
-
-# pushd tools
-# make %{?_smp_mflags}
-# popd
 
 pushd src
 ./configure --shared --fst-root=/usr --fst-version=1.6.7
 make depend %{?_smp_mflags}
 make %{?_smp_mflags}
 popd
-
-# FIXME: debug only (fast turnaround)
-# tar xfvz /tmp/kb.tgz
-
 
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
@@ -303,6 +277,37 @@ echo "/opt/kaldi/src/lib" > $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d/kaldi-asr
 
 /opt/kaldi/src/lib/*.so
 
+# egs
+
+/opt/kaldi/egs/*
+
+# bin
+
+/opt/kaldi/src/bin/*
+/opt/kaldi/src/chainbin/*
+/opt/kaldi/src/featbin/*
+/opt/kaldi/src/fgmmbin/*
+/opt/kaldi/src/fstbin/*
+/opt/kaldi/src/gmmbin/*
+/opt/kaldi/src/ivectorbin/*
+/opt/kaldi/src/kwsbin/*
+/opt/kaldi/src/latbin/*
+/opt/kaldi/src/lmbin/*
+/opt/kaldi/src/nnet2bin/*
+/opt/kaldi/src/nnet3bin/*
+/opt/kaldi/src/nnetbin/*
+/opt/kaldi/src/online2bin/*
+/opt/kaldi/src/onlinebin/*
+/opt/kaldi/src/rnnlmbin/*
+/opt/kaldi/src/sgmm2bin/*
+/opt/kaldi/src/tfrnnlmbin/*
+
+# ld.so.conf.d
+
+%{_sysconfdir}/ld.so.conf.d/kaldi-asr.conf
+
+%files devel
+
 # headers
 
 /opt/kaldi/src/base/*.h
@@ -336,41 +341,10 @@ echo "/opt/kaldi/src/lib" > $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d/kaldi-asr
 
 %{_libdir}/pkgconfig/kaldi-asr.pc
 
-# # openfst
-# 
-# /opt/kaldi/tools/openfst/include/*
-# /opt/kaldi/tools/openfst/lib/*
-
-# egs
-
-/opt/kaldi/egs/*
-
-# bin
-
-/opt/kaldi/src/bin/*
-/opt/kaldi/src/chainbin/*
-/opt/kaldi/src/featbin/*
-/opt/kaldi/src/fgmmbin/*
-/opt/kaldi/src/fstbin/*
-/opt/kaldi/src/gmmbin/*
-/opt/kaldi/src/ivectorbin/*
-/opt/kaldi/src/kwsbin/*
-/opt/kaldi/src/latbin/*
-/opt/kaldi/src/lmbin/*
-/opt/kaldi/src/nnet2bin/*
-/opt/kaldi/src/nnet3bin/*
-/opt/kaldi/src/nnetbin/*
-/opt/kaldi/src/online2bin/*
-/opt/kaldi/src/onlinebin/*
-/opt/kaldi/src/rnnlmbin/*
-/opt/kaldi/src/sgmm2bin/*
-/opt/kaldi/src/tfrnnlmbin/*
-
-# ld.so.conf.d
-
-%{_sysconfdir}/ld.so.conf.d/kaldi-asr.conf
-
 %changelog
+* Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 5.4-3
+- separate devel package
+
 * Sun Jul 22 2018 Guenter Bartsch <guenter@zamia.org> - 5.4-2
 - use system-wide openfst
 

@@ -2,13 +2,14 @@
 
 Name:           openfst
 Version:        1.6.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Weighted finite-state transducer library
 
 License:        ASL 2.0
 URL:            http://www.openfst.org/
 Source0:        http://www.openfst.org/twiki/pub/FST/FstDownload/%{name}-%{version}.tar.gz
 Source1:        http://openfst.cs.nyu.edu/twiki/pub/Contrib/OpenFstBashComp/openfstbc
+Source2:        openfst.pc
 
 BuildRequires:  chrpath
 BuildRequires:  gcc-c++
@@ -127,6 +128,8 @@ sed -e '2s/"1" "[[:alpha:]]* [[:digit:]]*"/"1" %{release_date}/' \
     -e 's,/builddir.*%{_bindir}/,,g' \
     -i %{buildroot}%{_mandir}/man1/*.1
 
+install -Dpm 644 %{SOURCE1} %{buildroot}%{_libdir}/pkgconfig/openfst.pc
+
 %post -p /sbin/ldconfig
 
 %postun -p /sbin/ldconfig
@@ -142,6 +145,7 @@ sed -e '2s/"1" "[[:alpha:]]* [[:digit:]]*"/"1" %{release_date}/' \
 %{_includedir}/fst/
 %{_libdir}/fst/*.so
 %{_libdir}/*.so
+%{_libdir}/pkgconfig/openfst.pc
 
 %files tools
 %{_bindir}/*
@@ -152,6 +156,9 @@ sed -e '2s/"1" "[[:alpha:]]* [[:digit:]]*"/"1" %{release_date}/' \
 %{python2_sitearch}/pywrapfst.so
 
 %changelog
+* Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 1.6.7-2
+- packageconfig file added
+
 * Sat Mar  3 2018 Jerry James <loganjerry@gmail.com> - 1.6.7-1
 - New upstream version
 
