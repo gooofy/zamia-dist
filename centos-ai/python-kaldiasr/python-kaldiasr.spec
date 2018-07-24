@@ -42,7 +42,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 
 Name:           python-%{altname}
 Version:        0.4.1
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Some simple wrappers around Kaldi ASR intended to make using it as convenient as possible. 
 
 License:        Apache-2
@@ -62,7 +62,7 @@ BuildRequires:  python-setuptools
 # BuildRequires:  python3-setuptools
 BuildRequires:  pytest
 BuildRequires:  Cython
-BuildRequires:  kaldi-asr
+BuildRequires:  kaldi-asr-devel
 BuildRequires:  atlas-devel
 
 %description
@@ -96,6 +96,8 @@ py.test-%{python2_version} -v
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 0.4.1-7
+- kaldi-asr-devel build dependency added
 * Mon Jul 23 2018 Guenter Bartsch <guenter@zamia.org> - 0.4.1-5
 - rebuild against new kaldi-asr 5.4
 * Sat Jul 14 2018 Guenter Bartsch <guenter@zamia.org> - 0.4.1-2
