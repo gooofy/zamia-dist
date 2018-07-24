@@ -1,7 +1,9 @@
 #!/bin/sh
 
-rm -f ~/repo/ai/centos/7/SRPMS/kaldi-asr*
-rm -f ~/repo/ai/centos/7/x86_64/kaldi-asr*
+PACKAGE='kaldi-asr'
+
+rm -f ~/repo/ai/centos/7/SRPMS/${PACKAGE}*
+rm -f ~/repo/ai/centos/7/x86_64/${PACKAGE}*
 
 cp ~/rpmbuild/SRPMS/*.rpm ~/repo/ai/centos/7/SRPMS
 cp ~/rpmbuild/RPMS/x86_64/*.rpm ~/repo/ai/centos/7/x86_64
