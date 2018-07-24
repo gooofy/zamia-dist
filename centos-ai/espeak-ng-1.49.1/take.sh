@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PACKAGE=pocketsphinx
+PACKAGE=espeak-ng
 
 rm -f ~/repo/ai/centos/7/SRPMS/${PACKAGE}*
 rm ~/repo/ai/centos/7/x86_64/${PACKAGE}*
