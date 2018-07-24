@@ -2,7 +2,7 @@
 
 Name:           openfst
 Version:        1.6.7
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Weighted finite-state transducer library
 
 License:        ASL 2.0
@@ -106,7 +106,7 @@ done
 
 # Install the bash completion file
 mkdir -p %{buildroot}%{_datadir}/bash-completion/completions
-cp -p %{SOURCE1} %{buildroot}%{_datadir}/bash-completion/completions/fstmap
+cp -p %{SOURCE2} %{buildroot}%{_datadir}/bash-completion/completions/fstmap
 for fil in arcsort closure compile compose compress concat connect convert \
     determinize difference disambiguate draw encode epsnormalize equal \
     equivalent info intersect invert isomorphic linear loglinearapply \
@@ -156,6 +156,9 @@ install -Dpm 644 %{SOURCE1} %{buildroot}%{_libdir}/pkgconfig/openfst.pc
 %{python2_sitearch}/pywrapfst.so
 
 %changelog
+* Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 1.6.7-3
+- bugfix
+
 * Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 1.6.7-2
 - packageconfig file added
 
