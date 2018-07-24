@@ -41,7 +41,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.1.0
+Version:        0.1.1
 Release:        2%{?dist}
 Summary:        Adapt Kaldi-ASR nnet3 chain models from Zamia-Speech.org to a different language model
 
@@ -50,6 +50,8 @@ URL:            https://github.com/gooofy/kaldi-adapt-lm
 Source0:        kaldi-adapt-lm-%{version}.tar.gz
 
 Requires:       kenlm
+Requires:       python-nltools
+Requires:       xz
 
 %{?python_provide:%python_provide python-%{altname}}
 BuildRequires:  python2-devel
@@ -90,6 +92,10 @@ BuildRequires:  pytest
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-2
+- add missing xz dependency
+* Mon Jul 23 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-1
+- add missing dependency, new upstream version
 * Mon Jul 23 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.0-2
 - add missing dependency
 * Mon Jul 23 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.0-1
