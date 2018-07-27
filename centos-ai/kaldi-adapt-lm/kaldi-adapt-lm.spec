@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.1.1
-Release:        2%{?dist}
+Version:        0.1.2
+Release:        1%{?dist}
 Summary:        Adapt Kaldi-ASR nnet3 chain models from Zamia-Speech.org to a different language model
 
 License:        Apache-2
@@ -92,6 +92,8 @@ BuildRequires:  pytest
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Fri Jul 27 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.2-1 
+- new upstream version
 * Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-2
 - add missing xz dependency
 * Mon Jul 23 2018 Guenter Bartsch <guenter@zamia.org> - 0.1.1-1
