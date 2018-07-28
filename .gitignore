@@ -159,3 +159,6 @@ centos-ai/kenlm/kenlm/
 
 centos-ai/kaldi-adapt-lm/kaldi-adapt-lm/
 
+centos-ai/bazel/bazel-0.15.2-dist.zip
+centos-ai/bazel/bazel-0.15.2.tar.gz
+
