@@ -168,3 +168,5 @@ centos-ai/protobuf/tmp/
 
 centos-ai/bazel/bazel-0.15.2.tar.gz
 
+centos-ai/tensorflow/tensorflow/
+centos-ai/tensorflow/v1.9.0.tar.gz
