@@ -175,3 +175,6 @@ centos-ai/python-mpd2/python-mpd2-1.0.0.tar.bz2
 
 centos-ai/python-absl/absl-py-0.3.0.tar.gz
 
+centos-ai/numpy/numpy-1.15.0.zip
+centos-ai/numpy/old/
+
