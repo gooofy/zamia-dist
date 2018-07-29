@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 Name:           tensorflow
 Version:        1.9.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Computation using data flow graphs for scalable machine learning
 License:        Apache License 2.0
 URL:            http://www.tensorflow.org/
@@ -12,13 +12,13 @@ BuildRequires:  bazel
 BuildRequires:  python-devel
 BuildRequires:  python-wheel
 BuildRequires:  protobuf-python >= 3.5.0
-BuildRequires:  numpy
+BuildRequires:  numpy >= 1.15.0
 BuildRequires:  gcc-c++
 BuildRequires:  zlib-devel
 BuildRequires:  jemalloc-devel
 
 Requires:       protobuf-python >= 3.5.0
-Requires:       numpy
+Requires:       numpy >= 1.15.0
 Requires:       python-absl
 
 %description
@@ -76,6 +76,9 @@ rm -rf %{buildroot}%{python_sitelib}/external
 %{python_sitelib}/tensorflow
 
 %changelog
+* Sun Jul 29 2018 Guenter Bartsch <guenter@zamia.org> - 1.9.0-4
+- numpy 1.15 dependency
+
 * Sat Jul 28 2018 Guenter Bartsch <guenter@zamia.org> - 1.9.0-3
 - python-absl dependency added
 
