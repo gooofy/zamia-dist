@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 Name:           tensorflow
 Version:        1.9.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Computation using data flow graphs for scalable machine learning
 License:        Apache License 2.0
 URL:            http://www.tensorflow.org/
@@ -19,6 +19,7 @@ BuildRequires:  jemalloc-devel
 
 Requires:       protobuf-python >= 3.5.0
 Requires:       numpy
+Requires:       python-absl
 
 %description
 TensorFlow is an open source software library for numerical computation using
@@ -75,6 +76,9 @@ rm -rf %{buildroot}%{python_sitelib}/external
 %{python_sitelib}/tensorflow
 
 %changelog
+* Sat Jul 28 2018 Guenter Bartsch <guenter@zamia.org> - 1.9.0-3
+- python-absl dependency added
+
 * Sat Jul 28 2018 Guenter Bartsch <guenter@zamia.org> - 1.9.0-2
 - fix numpy dependency
 
