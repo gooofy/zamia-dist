@@ -178,3 +178,6 @@ centos-ai/python-absl/absl-py-0.3.0.tar.gz
 centos-ai/numpy/numpy-1.15.0.zip
 centos-ai/numpy/old/
 
+centos-ai/python-h5py/h5py-2.3.1-1.el7.src.rpm
+centos-ai/python-h5py/h5py-2.3.1.tar.gz
+

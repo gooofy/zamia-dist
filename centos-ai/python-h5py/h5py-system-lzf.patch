@@ -1,0 +1,36 @@
+diff -up h5py-2.3.0/lzf/lzf_filter.c.lzf h5py-2.3.0/lzf/lzf_filter.c
+--- h5py-2.3.0/lzf/lzf_filter.c.lzf	2014-04-22 07:00:04.000000000 -0600
++++ h5py-2.3.0/lzf/lzf_filter.c	2014-04-22 21:14:07.109003123 -0600
+@@ -26,7 +26,7 @@
+ #include <stdio.h>
+ #include <errno.h>
+ #include "hdf5.h"
+-#include "lzf/lzf.h"
++#include "lzf.h"
+ #include "lzf_filter.h"
+ 
+ /* Our own versions of H5Epush_sim, as it changed in 1.8 */
+diff -up h5py-2.3.0/setup.py.lzf h5py-2.3.0/setup.py
+--- h5py-2.3.0/setup.py.lzf	2014-04-22 07:00:04.000000000 -0600
++++ h5py-2.3.0/setup.py	2014-04-22 21:14:25.104369896 -0600
+@@ -146,7 +146,7 @@ if sys.platform.startswith('win'):
+             shutil.copy(op.join(HDF5, 'bin', f), localpath('h5py', f))
+ else:
+     COMPILER_SETTINGS = {
+-       'libraries'      : ['hdf5', 'hdf5_hl'],
++       'libraries'      : ['hdf5', 'hdf5_hl', 'lzf'],
+        'include_dirs'   : [localpath('lzf')],
+        'library_dirs'   : [],
+        'define_macros'  : [('H5_USE_16_API', None)]
+@@ -193,9 +193,8 @@ if HAVE_CYTHON:
+ else:
+     configure.printerr("Cython not present; building for HDF5 1.8.4+")
+ 
+-EXTRA_SRC = {'h5z': [ localpath("lzf/lzf_filter.c"),
+-                      localpath("lzf/lzf/lzf_c.c"),
+-                      localpath("lzf/lzf/lzf_d.c")]}
++EXTRA_SRC = {'h5z': [ localpath("lzf/lzf_filter.c")]}
++
+ 
+ def make_extension(module):
+     sources = [op.join('h5py', module+SUFFIX)] + EXTRA_SRC.get(module, [])
