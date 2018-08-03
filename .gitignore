@@ -183,3 +183,7 @@ centos-ai/python-h5py/h5py-2.3.1.tar.gz
 
 centos-ai/scipy/scipy-0.12.1-6.el7.src.rpm
 centos-ai/scipy/scipy-0.12.1.tar.gz
+
+centos-ai/python-pandas/pandas-0.17.1.tar.gz
+centos-ai/python-pandas/python-pandas-0.17.1-1.el7.src.rpm
+
