@@ -187,3 +187,6 @@ centos-ai/scipy/scipy-0.12.1.tar.gz
 centos-ai/python-pandas/pandas-0.17.1.tar.gz
 centos-ai/python-pandas/python-pandas-0.17.1-1.el7.src.rpm
 
+centos-ai/python-Bottleneck/Bottleneck-0.7.0.tar.gz
+centos-ai/python-Bottleneck/python-Bottleneck-0.7.0-1.el7.src.rpm
+
