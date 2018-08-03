@@ -1,0 +1,147 @@
+diff --git a/doc/source/tutorial/weave.rst b/doc/source/tutorial/weave.rst
+index 12cff19..7a481db 100644
+--- a/doc/source/tutorial/weave.rst
++++ b/doc/source/tutorial/weave.rst
+@@ -885,11 +885,11 @@ Microsoft VC++ installed.
+ When ``inline`` is first run, you'll notice that pause and some trash printed
+ to the screen. The "trash" is acutually part of the compilers output that
+ distutils does not supress. The name of the extension file,
+-``sc_bighonkingnumber.cpp``, is generated from the md5 check sum of the C/C++
+-code fragment. On Unix or windows machines with only gcc installed, the trash
+-will not appear. On the second call, the code fragment is not compiled since
+-it already exists, and only the answer is returned. Now kill the interpreter
+-and restart, and run the same code with a different string.
++``sc_bighonkingnumber.cpp``, is generated from the SHA-256 check sum of the
++C/C++ code fragment. On Unix or windows machines with only gcc installed, the
++trash will not appear. On the second call, the code fragment is not compiled
++since it already exists, and only the answer is returned. Now kill the
++interpreter and restart, and run the same code with a different string.
+ 
+ ::
+ 
+@@ -1151,8 +1151,8 @@ A quick look at the code
+ ------------------------
+ 
+ ``weave`` generates a C++ file holding an extension function for each
+-``inline`` code snippet. These file names are generated using from the md5
+-signature of the code snippet and saved to a location specified by the
++``inline`` code snippet. These file names are generated using from the
++SHA-256 signature of the code snippet and saved to a location specified by the
+ PYTHONCOMPILED environment variable (discussed later). The cpp files are
+ generally about 200-400 lines long and include quite a few functions to
+ support type conversions, etc. However, the actual compiled function is
+@@ -2401,10 +2401,10 @@ been built before.
+ 
+ .. note::
+   If we were willing to always pay the penalty of building the C++
+-  code for a module, we could store the md5 checksum of the C++ code
++  code for a module, we could store the SHA-256 checksum of the C++ code
+   along with some information about the compiler, platform, etc. Then,
+   ``ext_module.compile()`` could try importing the module before it
+-  actually compiles it, check the md5 checksum and other meta-data in
++  actually compiles it, check the SHA-256 checksum and other meta-data in
+   the imported module with the meta-data of the code it just produced
+   and only compile the code if the module didn't exist or the
+   meta-data didn't match. This would reduce the above code to::
+diff --git a/scipy/weave/accelerate_tools.py b/scipy/weave/accelerate_tools.py
+index 935ca23..1627447 100644
+--- a/scipy/weave/accelerate_tools.py
++++ b/scipy/weave/accelerate_tools.py
+@@ -12,7 +12,7 @@ from __future__ import absolute_import, print_function
+ 
+ from types import InstanceType, XRangeType
+ import inspect
+-import scipy.weave.md5_load as md5
++from hashlib import sha256
+ import scipy.weave as weave
+ from numpy.testing import assert_
+ 
+@@ -342,7 +342,7 @@ class accelerate(object):
+         return fast
+ 
+     def identifier(self,signature):
+-        # Build an MD5 checksum
++        # Build a SHA-256 checksum
+         f = self.function
+         co = f.func_code
+         identifier = str(signature)+\
+@@ -350,7 +350,7 @@ class accelerate(object):
+                      str(co.co_consts)+\
+                      str(co.co_varnames)+\
+                      co.co_code
+-        return 'F'+md5.md5(identifier).hexdigest()
++        return 'F' + sha256(identifier).hexdigest()
+ 
+     def accelerate(self,signature,identifier):
+         P = Python2CXX(self.function,signature,name=identifier)
+diff --git a/scipy/weave/build_tools.py b/scipy/weave/build_tools.py
+index c0f8baa..27d27a4 100644
+--- a/scipy/weave/build_tools.py
++++ b/scipy/weave/build_tools.py
+@@ -234,7 +234,7 @@ def build_extension(module_path,compiler_name = '',build_dir = None,
+     # dag. We keep having to add directories to the path to keep
+     # object files separated from each other.  gcc2.x and gcc3.x C++
+     # object files are not compatible, so we'll stick them in a sub
+-    # dir based on their version.  This will add an md5 check sum
++    # dir based on their version. This will add a SHA-256 check sum
+     # of the compiler binary to the directory name to keep objects
+     # from different compilers in different locations.
+ 
+diff --git a/scipy/weave/catalog.py b/scipy/weave/catalog.py
+index 274ed41..bb15f26 100644
+--- a/scipy/weave/catalog.py
++++ b/scipy/weave/catalog.py
+@@ -84,13 +84,13 @@ def getmodule(object):
+ def expr_to_filename(expr):
+     """ Convert an arbitrary expr string to a valid file name.
+ 
+-        The name is based on the md5 check sum for the string and
++        The name is based on the SHA-256 check sum for the string and
+         Something that was a little more human readable would be
+         nice, but the computer doesn't seem to care.
+     """
+-    import scipy.weave.md5_load as md5
++    from hashlib import sha256
+     base = 'sc_'
+-    return base + md5.new(expr).hexdigest()
++    return base + sha256(expr).hexdigest()
+ 
+ def unique_file(d,expr):
+     """ Generate a unqiue file name based on expr in directory d
+diff --git a/scipy/weave/md5_load.py b/scipy/weave/md5_load.py
+deleted file mode 100644
+index 80594ad..0000000
+--- a/scipy/weave/md5_load.py
++++ /dev/null
+@@ -1,11 +0,0 @@
+-# Import correct md5, irrespective of the Python version
+-#
+-# `hashlib` was introduced in 2.5, deprecating `md5`
+-from __future__ import absolute_import, print_function
+-
+-try:
+-    from hashlib import *
+-except ImportError:
+-    from md5 import *
+-
+-new = md5
+diff --git a/scipy/weave/platform_info.py b/scipy/weave/platform_info.py
+index df67ca5..f7d7490 100644
+--- a/scipy/weave/platform_info.py
++++ b/scipy/weave/platform_info.py
+@@ -89,13 +89,13 @@ def compiler_exe_path(exe_name):
+     return exe_path
+ 
+ def check_sum(file):
+-    import scipy.weave.md5_load as md5
++    from hashlib import sha256
+     try:
+         f = open(file,'r')
+         bytes = f.read(-1)
+     except IOError:
+         bytes = ''
+-    chk_sum = md5.md5(bytes)
++    chk_sum = sha256(bytes)
+     return chk_sum.hexdigest()
+ 
+ def get_compiler_dir(compiler_name):
