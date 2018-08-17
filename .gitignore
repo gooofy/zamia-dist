@@ -22,6 +22,7 @@ raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-chain-zamia-speech-en/
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
+raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tri2b_chain-r*
 
 raspbian-ai/libkaldi-asr/libkaldi-asr/
 raspbian-ai/libkaldi-asr/old/
@@ -66,6 +67,7 @@ debian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-chain-zamia-speech-en/
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
+debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tri2b_chain-r*
 
 debian-ai/libkaldi-asr/libkaldi-asr
 debian-ai/libkaldi-asr/opt
