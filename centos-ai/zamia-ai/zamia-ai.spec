@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.2.0
-Release:        4%{?dist}
+Version:        0.2.1
+Release:        2%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
 License:        Apache-2
@@ -113,7 +113,7 @@ popd
 %files -n %{modname}
 # %license LICENSE
 # %doc HISTORY.rst README.rst
-%doc README.md
+%doc README.adoc examples
 %{python2_sitelib}/%{eggname}-*.egg-info
 %{python2_sitelib}/%{altname}/
 # %{_datadir}/zamia-ai
@@ -125,6 +125,8 @@ popd
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Sun Aug 19 2018 Guenter Bartsch <guenter@zamia.org> - 0.2.1-1
+- new upstream release
 * Tue Jul 17 2018 Guenter Bartsch <guenter@zamia.org> - 0.2.0-2
 - add missing xwam files
 * Tue Jul 17 2018 Guenter Bartsch <guenter@zamia.org> - 0.2.0-1
