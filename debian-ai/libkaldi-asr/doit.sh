@@ -1,13 +1,20 @@
 #!/bin/bash
 
-VERSION="5.3-2"
+VERSION="5.3-3"
 
 TARBALLNAME=kaldi-asr-bin.tar.gz
 
-echo "tar..."
+rm -rf opt.1
+echo "cp -rp opt opt.1 ..."
+time cp -rp opt opt.1
 
-pushd opt
-tar cfvz /tmp/${TARBALLNAME} kaldi/tools/openfst kaldi/tools/openfst-1.6.7/lib/*.so* kaldi/tools/openfst-1.6.7/include  kaldi/src/*/*.h kaldi/src/*/*.so kaldi/COPYING kaldi/INSTALL kaldi/README.md kaldi/src/INSTALL kaldi/src/NOTES kaldi/src/TODO 
+echo "cleanup .o / .cc"
+time find opt.1 -name "*.o" -print -exec rm \{\} \;
+time find opt.1 -name "*.cc" -print -exec rm \{\} \;
+
+echo "tar..."
+pushd opt.1
+time tar cfvz /tmp/${TARBALLNAME} kaldi/tools/openfst kaldi/tools/openfst-1.6.7/lib/*.so* kaldi/tools/openfst-1.6.7/include  kaldi/src/*/*.h kaldi/src/*/*.so kaldi/COPYING kaldi/INSTALL kaldi/README.md kaldi/src/INSTALL kaldi/src/NOTES kaldi/src/TODO kaldi/egs kaldi/src/bin kaldi/src/chainbin kaldi/src/featbin kaldi/src/fgmmbin kaldi/src/fstbin kaldi/src/gmmbin kaldi/src/ivectorbin kaldi/src/kwsbin kaldi/src/latbin kaldi/src/lmbin kaldi/src/nnet2bin kaldi/src/nnet3bin kaldi/src/nnetbin kaldi/src/online2bin kaldi/src/onlinebin kaldi/src/rnnlmbin kaldi/src/sgmm2bin kaldi/src/tfrnnlmbin
 popd
 
 rm -rf libkaldi-asr
