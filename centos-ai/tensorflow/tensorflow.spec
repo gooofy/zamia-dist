@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 Name:           tensorflow
 Version:        1.9.0
-Release:        4%{?dist}
+Release:        6%{?dist}
 Summary:        Computation using data flow graphs for scalable machine learning
 License:        Apache License 2.0
 URL:            http://www.tensorflow.org/
@@ -20,6 +20,9 @@ BuildRequires:  jemalloc-devel
 Requires:       protobuf-python >= 3.5.0
 Requires:       numpy >= 1.15.0
 Requires:       python-absl
+Requires:       python-enum
+Requires:       python-enum34
+Requires:       python2-mock
 
 %description
 TensorFlow is an open source software library for numerical computation using
