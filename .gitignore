@@ -174,6 +174,7 @@ centos-ai/bazel/bazel-0.15.2.tar.gz
 
 centos-ai/tensorflow/tensorflow/
 centos-ai/tensorflow/v1.9.0.tar.gz
+centos-ai/tensorflow-binary/
 
 centos-ai/python-mpd2/python-mpd2-1.0.0.tar.bz2
 
@@ -194,3 +195,4 @@ centos-ai/python-pandas/python-pandas-0.17.1-1.el7.src.rpm
 centos-ai/python-Bottleneck/Bottleneck-0.7.0.tar.gz
 centos-ai/python-Bottleneck/python-Bottleneck-0.7.0-1.el7.src.rpm
 
+centos-ai/fastText/fastText-0.1.0.tar.gz
