@@ -42,7 +42,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 
 Name:           %{modname}
 Version:        0.2.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
 License:        Apache-2
@@ -59,6 +59,7 @@ Requires:       python-tzlocal
 Requires:       python-codegen
 Requires:       scipy
 Requires:       tensorflow
+Requires:       h5py
 
 
 %{?python_provide:%python_provide python-%{altname}}
