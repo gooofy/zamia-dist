@@ -1,6 +1,6 @@
 Name:		kaldi-asr
 Version:	5.4
-Release:	4.20180722gita639dd2%{?dist}
+Release:	5.20180722gita639dd2%{?dist}
 Group:		Applications/Multimedia
 License:	Apache License v 2.0
 Summary:	Kaldi Speech Recognition Toolkit
@@ -22,6 +22,7 @@ BuildRequires: openfst-devel
 
 Requires:	atlas
 Requires:	openfst
+Requires:	openfst-tools
 
 %description
 This package provides the Kaldi Speech Recognition Toolkit
