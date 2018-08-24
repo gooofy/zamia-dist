@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.1.2
+VERSION=0.1.4
 
 rm -rf kaldi-adapt-lm-${VERSION} kaldi-adapt-lm-${VERSION}.tar.gz
 

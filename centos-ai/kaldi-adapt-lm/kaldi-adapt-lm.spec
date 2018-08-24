@@ -41,7 +41,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.1.2
+Version:        0.1.4
 Release:        1%{?dist}
 Summary:        Adapt Kaldi-ASR nnet3 chain models from Zamia-Speech.org to a different language model
 
