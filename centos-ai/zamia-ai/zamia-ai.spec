@@ -41,7 +41,7 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.2.3
+Version:        0.2.4
 Release:        1%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
@@ -60,6 +60,7 @@ Requires:       python-codegen
 Requires:       scipy
 Requires:       tensorflow
 Requires:       h5py
+Requires:       python-dateutil
 
 
 %{?python_provide:%python_provide python-%{altname}}
