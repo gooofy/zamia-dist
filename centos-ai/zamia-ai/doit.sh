@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.2.1
+VERSION=0.2.3
 
 rm -rf zamia-ai-${VERSION} zamia-ai-${VERSION}.tar.gz
 

@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           %{modname}
-Version:        0.2.1
-Release:        4%{?dist}
+Version:        0.2.3
+Release:        1%{?dist}
 Summary:        Free and open source A.I. system based on Python, TensorFlow and Prolog.
 
 License:        Apache-2
