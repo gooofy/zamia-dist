@@ -102,9 +102,9 @@ debian-ai/python-num2words/python-num2words_*
 debian-ai/xsb/old/
 debian-ai/xsb/xsb-3.8.tar.gz
 debian-ai/xsb/xsb-3.8/
-debian-ai/xsb/xsb_3.8-1_amd64.build
-debian-ai/xsb/xsb_3.8-1_amd64.buildinfo
-debian-ai/xsb/xsb_3.8-1_amd64.changes
+debian-ai/xsb/xsb_3.8-*.build
+debian-ai/xsb/xsb_3.8-*.buildinfo
+debian-ai/xsb/xsb_3.8-*.changes
 
 centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
 centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*

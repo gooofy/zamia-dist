@@ -1,3 +1,8 @@
+xsb (3.8-2) unstable; urgency=medium
+
+  * postinst added
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 03 Sep 2018 17:15:00 +0200
 xsb (3.8-1) unstable; urgency=medium
 
   * Initial release (Closes: #0000)

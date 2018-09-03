@@ -1,0 +1,5 @@
+#!/bin/bash
+
+find /opt/xsb -name "*.xwam" -exec touch \{\} \;
+ldconfig
+
