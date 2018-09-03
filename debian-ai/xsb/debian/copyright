@@ -1,0 +1,20 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: XSB
+Source: http://xsb.sourceforge.net
+
+Files: *
+Copyright: Copyright (C) The Research Foundation of SUNY, 1986, 1993-2013
+           Copyright (C) ECRC, Germany, 1990
+License: LGPL
+
+Files: debian/*
+Copyright: 2017, 2018 Guenter Bartsch <guenter@zamia.org>
+License: MIT
+
+License: LGPL
+ This file may be redistributed under the terms of the
+ GNU Library General Public License.
+ .
+ On Debian systems, the complete text of the GNU Library General Public
+ License can be found in ‘/usr/share/common-licenses/LGPL’.
+

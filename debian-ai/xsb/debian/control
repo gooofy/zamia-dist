@@ -1,0 +1,33 @@
+Source: xsb
+Section: interpreters
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), libcurl4-openssl-dev, libpcre3-dev, openjdk-8-jdk, xutils-dev, dos2unix
+Standards-Version: 3.9.8
+Homepage: http://xsb.sourceforge.net
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/xsb.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/xsb.git/
+
+Package: xsb
+Architecture: any
+Depends: ${misc:Depends}
+Suggests: xsb-doc
+Description: Logic Programming and Deductive Database system for Unix and Windows
+ XSB is a Logic Programming and Deductive Database system for Unix and Windows.
+ It is being developed at a number of institutions, including the Computer
+ Science Department of Stony Brook University, Universidade Nova de Lisboa, XSB
+ Inc., and Coherent Knowledge Systems, Inc.  
+ .
+ This package installs XSB.
+
+Package: xsb-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Logic Programming and Deductive Database system for Unix and Windows 
+ XSB is a Logic Programming and Deductive Database system for Unix and Windows.
+ It is being developed at a number of institutions, including the Computer
+ Science Department of Stony Brook University, Universidade Nova de Lisboa, XSB
+ Inc., and Coherent Knowledge Systems, Inc.  
+ .
+ This is the common documentation package.
