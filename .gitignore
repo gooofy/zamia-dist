@@ -106,6 +106,12 @@ debian-ai/xsb/xsb_3.8-*.build
 debian-ai/xsb/xsb_3.8-*.buildinfo
 debian-ai/xsb/xsb_3.8-*.changes
 
+debian-ai/python-pyxsb/py-xsb
+debian-ai/python-pyxsb/python-pyxsb-?.?.?/
+debian-ai/python-pyxsb/python-pyxsb_?.?.?-?_amd64.build
+debian-ai/python-pyxsb/python-pyxsb_?.?.?-?_amd64.buildinfo
+debian-ai/python-pyxsb/python-pyxsb_?.?.?-?_amd64.changes
+
 centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
 centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
 centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*

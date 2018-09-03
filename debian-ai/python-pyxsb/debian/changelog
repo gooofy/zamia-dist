@@ -1,0 +1,5 @@
+python-pyxsb (0.3.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #0000)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Mon, 03 Sep 2018 21:32:06 +0100

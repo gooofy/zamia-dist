@@ -1,0 +1,45 @@
+Source: python-pyxsb
+Section: python
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools
+Standards-Version: 3.9.8
+Homepage: https://github.com/gooofy/py-pyxsb
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-pyxsb.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-pyxsb.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-pyxsb
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, xsb
+Suggests: python-pyxsb-doc
+Description: Python - XSB bridge enabling querying XSB in your Python programs (Python 2)
+ A Python - XSB bridge enabling querying XSB in your Python programs. It
+ features a ctypes mapping of XSB’s C-Interface as well as some higher level
+ convenience wrappers.  
+ .
+ This package installs the library for Python 2.
+
+Package: python3-pyxsb
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, xsb
+Suggests: python-pyxsb-doc
+Description: Python - XSB bridge enabling querying XSB in your Python programs (Python 3)
+ A Python - XSB bridge enabling querying XSB in your Python programs. It
+ features a ctypes mapping of XSB’s C-Interface as well as some higher level
+ convenience wrappers.  
+ .
+ This package installs the library for Python 3.
+
+Package: python-pyxsb-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Python - XSB bridge enabling querying XSB in your Python programs (common documentation)
+ A Python - XSB bridge enabling querying XSB in your Python programs. It
+ features a ctypes mapping of XSB’s C-Interface as well as some higher level
+ convenience wrappers.  
+ .
+ This is the common documentation package.
