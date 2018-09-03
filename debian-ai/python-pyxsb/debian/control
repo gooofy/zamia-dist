@@ -13,7 +13,7 @@ X-Python3-Version: >= 3.2
 
 Package: python-pyxsb
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, xsb
+Depends: ${python:Depends}, ${misc:Depends}, xsb, python-six
 Suggests: python-pyxsb-doc
 Description: Python - XSB bridge enabling querying XSB in your Python programs (Python 2)
  A Python - XSB bridge enabling querying XSB in your Python programs. It
@@ -24,7 +24,7 @@ Description: Python - XSB bridge enabling querying XSB in your Python programs (
 
 Package: python3-pyxsb
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}, xsb
+Depends: ${python3:Depends}, ${misc:Depends}, xsb, python3-six
 Suggests: python-pyxsb-doc
 Description: Python - XSB bridge enabling querying XSB in your Python programs (Python 3)
  A Python - XSB bridge enabling querying XSB in your Python programs. It

@@ -8,7 +8,7 @@ export PYBUILD_NAME=pyxsb
 
 override_dh_installexamples:
 	dh_installexamples
-	dh_installexamples -ppython-pyxsb-doc demo_*.py
+	dh_installexamples -ppython-pyxsb-doc demo_*.py *.pl
 
 override_dh_installdocs:
 	dh_installdocs
