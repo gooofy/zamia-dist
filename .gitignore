@@ -112,6 +112,12 @@ debian-ai/python-pyxsb/python-pyxsb_?.?.?-?_amd64.build
 debian-ai/python-pyxsb/python-pyxsb_?.?.?-?_amd64.buildinfo
 debian-ai/python-pyxsb/python-pyxsb_?.?.?-?_amd64.changes
 
+debian-ai/python-zamiaai/python-zamiaai-?.?.?/
+debian-ai/python-zamiaai/python-zamiaai_?.?.?-?_amd64.build
+debian-ai/python-zamiaai/python-zamiaai_?.?.?-?_amd64.buildinfo
+debian-ai/python-zamiaai/python-zamiaai_?.?.?-?_amd64.changes
+debian-ai/python-zamiaai/zamia-ai
+
 centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
 centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
 centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*

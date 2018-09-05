@@ -1,0 +1,51 @@
+Source: python-zamiaai
+Section: python
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools, xsb
+Standards-Version: 3.9.8
+Homepage: https://github.com/gooofy/zamia-ai
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-zamiaai.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-zamiaai.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-zamiaai
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, xsb, python-pyxsb, python-nltools, python-cmdln, python-six, python-tzlocal, python-tz, python-numpy, python-codegen
+Suggests: python-zamiaai-doc
+Description: Free and open source A.I. system based on Python, TensorFlow and Prolog. (Python 2)
+ The Zamia AI project is a framework that provides a set of components needed to
+ build completely free, open source end-to-end speech and natural language
+ processing A.I. systems.
+ For more information about the Zamia AI project check out our homepage at:
+ http://zamia-ai.org
+ .
+ This package installs the library for Python 2.
+
+Package: python3-zamiaai
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, xsb, python3-pyxsb, python3-nltools, python3-cmdln, python3-six, python3-tz, python-tzlocal, python3-numpy, python-codegen
+Suggests: python-zamiaai-doc
+Description: Free and open source A.I. system based on Python, TensorFlow and Prolog. (Python 3)
+ The Zamia AI project is a framework that provides a set of components needed to
+ build completely free, open source end-to-end speech and natural language
+ processing A.I. systems.
+ For more information about the Zamia AI project check out our homepage at:
+ http://zamia-ai.org
+ .
+ This package installs the library for Python 3.
+
+Package: python-zamiaai-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Free and open source A.I. system based on Python, TensorFlow and Prolog. (common documentation)
+ The Zamia AI project is a framework that provides a set of components needed to
+ build completely free, open source end-to-end speech and natural language
+ processing A.I. systems.
+ For more information about the Zamia AI project check out our homepage at:
+ http://zamia-ai.org
+ .
+ This is the common documentation package.

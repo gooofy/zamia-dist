@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+export PYBUILD_NAME=zamiaai
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_installexamples:
+	dh_installexamples
+	dh_installexamples -ppython-zamiaai-doc examples
+
+override_dh_installdocs:
+	dh_installdocs
+	dh_installdocs -ppython-zamiaai-doc README.adoc
