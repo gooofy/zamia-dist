@@ -1,0 +1,87 @@
+Source: python-cmdln
+Section: python
+Priority: optional
+Maintainer: Guenter Bartsch <guenter@zamia.org>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools, xsb
+Standards-Version: 3.9.8
+Homepage: https://github.com/trentm/cmdln
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-cmdln.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-cmdln.git/
+#Testsuite: autopkgtest-pkg-python
+
+Package: python-cmdln
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Suggests: python-cmdln-doc
+Description: An improved cmd.py for writing multi-command scripts and shells. (Python 2) 
+ Why cmdln.py?
+ cmdln.py fixes some of the design flaws in cmd.py and uses the optparse module
+ so that it is more useful (and convenient) for implementing command-line
+ scripts/shells.
+ The main differences are:
+ Instead of passing a command line to subcommand handlers, already parsed
+ options and an args list are provided. This is much more convenient when the
+ complexity of commands grows to have options, arguments with spaces, etc.  
+ By default the help for a subcommand is the associated method's docstring.
+ Default help output is also much nicer and some template vars can be used to
+ automatically fill in some details.  Defining command aliases is easy (using a
+ new decorator).  
+ A .main() method is provided to make using your Cmdln subclass a little
+ cleaner.  
+ The error handling (and associated hooks) have been improved so that trapping
+ and dealing with errors in sub-command handlers (the do_*
+ methods) can be done -- as might be wanted for a slighty more robust shell.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-cmdln
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Suggests: python-cmdln-doc
+Description: An improved cmd.py for writing multi-command scripts and shells. (Python 3)
+ Why cmdln.py?
+ cmdln.py fixes some of the design flaws in cmd.py and uses the optparse module
+ so that it is more useful (and convenient) for implementing command-line
+ scripts/shells.
+ The main differences are:
+ Instead of passing a command line to subcommand handlers, already parsed
+ options and an args list are provided. This is much more convenient when the
+ complexity of commands grows to have options, arguments with spaces, etc.  
+ By default the help for a subcommand is the associated method's docstring.
+ Default help output is also much nicer and some template vars can be used to
+ automatically fill in some details.  Defining command aliases is easy (using a
+ new decorator).  
+ A .main() method is provided to make using your Cmdln subclass a little
+ cleaner.  
+ The error handling (and associated hooks) have been improved so that trapping
+ and dealing with errors in sub-command handlers (the do_*
+ methods) can be done -- as might be wanted for a slighty more robust shell.
+ .
+ This package installs the library for Python 3.
+
+Package: python-cmdln-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: An improved cmd.py for writing multi-command scripts and shells. (common documentation)
+ Why cmdln.py?
+ cmdln.py fixes some of the design flaws in cmd.py and uses the optparse module
+ so that it is more useful (and convenient) for implementing command-line
+ scripts/shells.
+ The main differences are:
+ Instead of passing a command line to subcommand handlers, already parsed
+ options and an args list are provided. This is much more convenient when the
+ complexity of commands grows to have options, arguments with spaces, etc.  
+ By default the help for a subcommand is the associated method's docstring.
+ Default help output is also much nicer and some template vars can be used to
+ automatically fill in some details.  Defining command aliases is easy (using a
+ new decorator).  
+ A .main() method is provided to make using your Cmdln subclass a little
+ cleaner.  
+ The error handling (and associated hooks) have been improved so that trapping
+ and dealing with errors in sub-command handlers (the do_*
+ methods) can be done -- as might be wanted for a slighty more robust shell.
+ .
+ This is the common documentation package.

@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+export PYBUILD_NAME=cmdln
+# export PYBUILD_SYSTEM=distutils
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_installexamples:
+	dh_installexamples
+	dh_installexamples -ppython-cmdln-doc examples
+
+override_dh_installdocs:
+	dh_installdocs
+	dh_installdocs -ppython-cmdln-doc docs  LICENSE.txt  MANIFEST.in  PKG-INFO  TODO.txt
