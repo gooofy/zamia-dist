@@ -1,3 +1,9 @@
+python-nltools (0.3.1-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 27 Oct 2018 23:49:11 +0200
+
 python-nltools (0.3.0-1) unstable; urgency=medium
 
   * new upstream version
