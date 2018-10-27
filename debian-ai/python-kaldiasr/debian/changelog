@@ -1,3 +1,9 @@
+python-kaldiasr (0.4.1-2) unstable; urgency=medium
+
+  * rebuild for new kaldiasr 5.4
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 27 Oct 2018 15:17:13 +0200
+
 python-kaldiasr (0.4.1-1) unstable; urgency=medium
 
   * new upstream release
