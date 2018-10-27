@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           python-%{altname}
-Version:        0.3.0
-Release:        3%{?dist}
+Version:        0.3.1
+Release:        1%{?dist}
 Summary:        A collection of basic python modules for spoken natural language processing
 
 License:        Apache-2
