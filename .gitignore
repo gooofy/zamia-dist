@@ -63,11 +63,14 @@ debian-ai/python-espeakng/python-espeakng_*
 debian-ai/kaldi-chain-zamia-speech-de/kaldi-chain-zamia-speech-de/
 debian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
 debian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
+debian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_f-r*
+debian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tri2b_chain-r*
 
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-chain-zamia-speech-en/
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
 debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tri2b_chain-r*
+debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_f-r*
 
 debian-ai/libkaldi-asr/libkaldi-asr
 debian-ai/libkaldi-asr/opt

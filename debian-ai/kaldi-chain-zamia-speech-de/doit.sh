@@ -1,15 +1,15 @@
 #!/bin/bash
 
-RELEASE=r20180611
-VERSION=20180611-2
+RELEASE=r20180905
+VERSION=20180905-1
 
 rm -rf kaldi-chain-zamia-speech-de/opt
 mkdir -p kaldi-chain-zamia-speech-de/opt/kaldi/model
 
-# kaldi-generic-de-tdnn_250-r20180611.tar.xz  kaldi-generic-de-tdnn_sp-r20180611.tar.xz
-
-cp -r kaldi-generic-de-tdnn_sp-r20180611 kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_sp
-cp -r kaldi-generic-de-tdnn_250-r20180611 kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_250
+cp -r kaldi-generic-de-tdnn_f-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_f
+cp -r kaldi-generic-de-tdnn_sp-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_sp
+cp -r kaldi-generic-de-tdnn_250-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_250
+cp -r kaldi-generic-de-tri2b_chain-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tri2b_chain
 
 # DEBIAN
 
