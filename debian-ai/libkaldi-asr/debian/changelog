@@ -1,0 +1,17 @@
+libkaldi-asr (5.4-3) unstable; urgency=medium
+
+  * relative symlink paths
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 27 Oct 2018 14:21:02 +0200
+
+libkaldi-asr (5.4-2) unstable; urgency=medium
+
+  * add postinst and packageconfig files
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sat, 27 Oct 2018 13:06:01 +0200
+
+libkaldi-asr (5.4-1) unstable; urgency=medium
+
+  * Initial release (Closes: #0000)
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 30 Sep 2018 11:12:00 +0200

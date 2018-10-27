@@ -72,6 +72,13 @@ debian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tri2b_chain-r*
 debian-ai/libkaldi-asr/libkaldi-asr
 debian-ai/libkaldi-asr/opt
 debian-ai/libkaldi-asr/opt.1
+debian-ai/libkaldi-asr/kaldi/
+debian-ai/libkaldi-asr/libkaldi-asr-?.?/
+debian-ai/libkaldi-asr/libkaldi-asr_?.?-?_amd64.build
+debian-ai/libkaldi-asr/libkaldi-asr_?.?-?_amd64.buildinfo
+debian-ai/libkaldi-asr/libkaldi-asr_?.?-?_amd64.changes
+debian-ai/libkaldi-asr/old/
+debian-ai/libkaldi-asr_?.?-?_amd64.build
 
 debian-ai/python-marytts/py-marytts/
 debian-ai/python-marytts/python-marytts-*

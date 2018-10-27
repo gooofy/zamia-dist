@@ -1,0 +1,67 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+export DH_VERBOSE = 1
+export PARALLEL_JOBS = 4
+
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+
+%:
+	dh $@ --parallel --sourcedirectory=src
+
+override_dh_auto_configure:
+	echo skipped
+	# cd src && ./configure --shared --fst-root=/usr --fst-version=1.6.7
+
+override_dh_auto_build:
+	cd tools && make -j${PARALLEL_JOBS}
+	cd src && ./configure --shared 
+	cd src && make -j${PARALLEL_JOBS} depend
+	cd src && make -j${PARALLEL_JOBS} 
+   
+override_dh_auto_install:
+	mkdir -p opt/kaldi
+	cp -rp src egs tools opt/kaldi/
+	echo "cleanup .o / .cc"
+	find opt -name "*.o" -print -exec rm \{\} \;
+	find opt -name "*.cc" -print -exec rm \{\} \;
+	cd opt && tar cfvz ../foo.tar kaldi/tools/openfst kaldi/tools/openfst-*/lib/*.so* kaldi/tools/openfst-*/include  kaldi/src/*/*.h kaldi/src/*/*.so kaldi/src/INSTALL kaldi/src/NOTES kaldi/src/TODO kaldi/egs kaldi/src/bin kaldi/src/chainbin kaldi/src/featbin kaldi/src/fgmmbin kaldi/src/fstbin kaldi/src/gmmbin kaldi/src/ivectorbin kaldi/src/kwsbin kaldi/src/latbin kaldi/src/lmbin kaldi/src/nnet2bin kaldi/src/nnet3bin kaldi/src/nnetbin kaldi/src/online2bin kaldi/src/onlinebin kaldi/src/rnnlmbin kaldi/src/sgmm2bin kaldi/src/tfrnnlmbin
+	# cd opt && tar cfvz ../foo.tar kaldi/tools/openfst kaldi/tools/openfst-*/lib/*.so* kaldi/tools/openfst-*/include  kaldi/src/*/*.h kaldi/src/*/*.so kaldi/COPYING kaldi/INSTALL kaldi/README.md kaldi/src/INSTALL kaldi/src/NOTES kaldi/src/TODO kaldi/egs kaldi/src/bin kaldi/src/chainbin kaldi/src/featbin kaldi/src/fgmmbin kaldi/src/fstbin kaldi/src/gmmbin kaldi/src/ivectorbin kaldi/src/kwsbin kaldi/src/latbin kaldi/src/lmbin kaldi/src/nnet2bin kaldi/src/nnet3bin kaldi/src/nnetbin kaldi/src/online2bin kaldi/src/onlinebin kaldi/src/rnnlmbin kaldi/src/sgmm2bin kaldi/src/tfrnnlmbin
+	rm -rf opt
+	mkdir opt
+	cd opt && tar xfvz ../foo.tar
+	find opt -name "*.so*" -type f -print -exec chmod 644 \{\} \;
+	find opt -name "*.so*" -type f -print -exec strip \{\} \;
+	find opt -name "*.so*" -type f -print -exec chrpath -d \{\} \;
+	mkdir -p etc/ld.so.conf.d
+	mv debian/99-kaldi.conf etc/ld.so.conf.d/
+	mkdir -p usr/lib/pkgconfig
+	mv debian/kaldi-asr.pc usr/lib/pkgconfig/
+
+	
+
+override_dh_auto_test:
+	echo "Skipping dh_auto_test"
+
+override_dh_clean:
+	dh_clean -X.orig
+
+
+override_dh_auto_clean:
+	rm -f src/base/version.h
+	rm -f src/kaldi.mk
+	find . \( \
+		-name '*.a' -o -name '.depend.mk' -o -name '*.o' -o -name '*.so' \
+		\) -exec rm {} +
+	rm -f src/probe/exp-test

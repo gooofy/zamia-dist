@@ -1,0 +1,3 @@
+opt/kaldi opt
+etc/ld.so.conf.d etc
+usr/lib usr

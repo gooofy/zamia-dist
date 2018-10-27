@@ -1,0 +1,19 @@
+Source: libkaldi-asr
+Priority: optional
+Maintainer: Marc Puels <mpuels@gmail.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Section: libs
+Homepage: http://kaldi-asr.org/
+Vcs-Git: https://github.com/mpuels/kaldi
+Vcs-Browser: https://github.com/mpuels/kaldi
+
+Package: libkaldi-asr
+Architecture: any
+Depends: ${misc:Depends}
+Description: Toolkit for speech recognition (runtime)
+ Kaldi is a toolkit for speech recognition, intended for use by speech
+ recognition researchers and professionals.
+ .
+ This package includes shared libraries required for decoding.
+
