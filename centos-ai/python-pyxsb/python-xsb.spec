@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           python-%{altname}
-Version:        0.3.2
-Release:        4%{?dist}
+Version:        1.0.0
+Release:        1%{?dist}
 Summary:        Python interface for XSB
 
 License:        Apache-2
@@ -92,6 +92,8 @@ py.test-%{python2_version} -v
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Wed Nov 07 2018 Guenter Bartsch <guenter@zamia.org> - 1.0.0-1
+- new upstream release
 * Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.3.2-4
 - add examples
 * Sun Jul 15 2018 Guenter Bartsch <guenter@zamia.org> - 0.3.2-3

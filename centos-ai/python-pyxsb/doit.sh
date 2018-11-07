@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.3.2
+VERSION=1.0.0
 
 rm -rf py-xsb-${VERSION} py-xsb-${VERSION}.tar.gz
 
