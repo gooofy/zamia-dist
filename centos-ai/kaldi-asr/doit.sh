@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=5.4
+VERSION=5.4.248
 
 rm -rf kaldi-asr-${VERSION} kaldi-asr-${VERSION}.tar.gz
 

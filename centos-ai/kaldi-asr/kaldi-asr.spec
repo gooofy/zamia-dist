@@ -1,6 +1,6 @@
 Name:		kaldi-asr
-Version:	5.4
-Release:	5.20180722gita639dd2%{?dist}
+Version:	5.4.248
+Release:	1%{?dist}
 Group:		Applications/Multimedia
 License:	Apache License v 2.0
 Summary:	Kaldi Speech Recognition Toolkit
@@ -343,6 +343,9 @@ echo "/opt/kaldi/src/lib" > $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d/kaldi-asr
 %{_libdir}/pkgconfig/kaldi-asr.pc
 
 %changelog
+* Thu May 02 2019 Guenter Bartsch <guenter@zamia.org> - 5.4.248
+- switched to latest upstream 5.4.248 release
+
 * Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 5.4-4
 - rebuild because of pkgconfig fixes for sys-openfst
 
