@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.4.1
+VERSION=0.5.2
 PKGNAME=python-kaldiasr
 GITNAME=py-kaldi-asr
 export DEBFULLNAME="Guenter Bartsch"
