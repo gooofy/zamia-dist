@@ -136,9 +136,10 @@ debian-ai/python-cmdln/python-cmdln_?.?.?-?_amd64.buildinfo
 debian-ai/python-cmdln/python-cmdln_?.?.?-?_amd64.changes
 
 centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
-centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
+centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_f-r*
+centos-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tri2b_chain-r*
 centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
-centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
+centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_f-r*
 centos-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tri2b_chain-r*
 
 centos-ai/xsb-3.8/XSB.1/
