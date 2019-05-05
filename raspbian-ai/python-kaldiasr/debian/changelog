@@ -1,3 +1,9 @@
+python-kaldiasr (0.5.2-1) unstable; urgency=medium
+
+  * new upstream release
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 05 May 2019 16:09:16 +0200
+
 python-kaldiasr (0.4.1-1) unstable; urgency=medium
 
   * new upstream release

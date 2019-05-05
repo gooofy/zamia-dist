@@ -1,5 +1,0 @@
-Name: atlas
-Version: 3.10.2
-Description: Debug information for package atlas
-Cflags: -I/usr/include/atlas/
-Libs: /usr/lib/libatlas.so.3 /usr/lib/libf77blas.so.3 /usr/lib/libcblas.so.3 /usr/lib/liblapack_atlas.so.3

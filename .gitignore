@@ -24,10 +24,9 @@ raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tri2b_chain-r*
 
-raspbian-ai/libkaldi-asr/libkaldi-asr/
-raspbian-ai/libkaldi-asr/old/
-raspbian-ai/libkaldi-asr/opt/
-raspbian-ai/libkaldi-asr/tmp/
+raspbian-ai/libkaldi-asr/kaldi
+raspbian-ai/libkaldi-asr/libkaldi-asr-?.?.*
+raspbian-ai/libkaldi-asr/libkaldi-asr_?.?.*
 
 raspbian-ai/python-picotts/py-picotts/
 raspbian-ai/python-picotts/python-picotts-*

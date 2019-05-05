@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kaldi-asr
+Source: http://kaldi-asr.org/
+
+Files: *
+Copyright: 2011-2018, John Hopkins University
+License: Apache-2.0
+
+Files: debian/*
+Copyright: 2017, 2018 Guenter Bartsch <guenter@zamia.org>
+License: Apache-2.0
+
