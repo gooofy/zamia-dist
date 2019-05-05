@@ -2,7 +2,7 @@
 %define _disable_source_fetch 0
 
 Name:           bazel
-Version:        0.15.2
+Version:        0.22.0
 Release:        1%{?dist}
 Summary:        Correct, reproducible, and fast builds for everyone.
 License:        Apache License 2.0
@@ -25,10 +25,12 @@ Correct, reproducible, and fast builds for everyone.
 
 %prep
 %setup -q -c -n %{name}-%{version}
+# %setup -qsh  
 
 %build
 CC=gcc
 CXX=g++
+pwd
 ./compile.sh
 ./output/bazel build //scripts:bazel-complete.bash
 ./output/bazel shutdown
@@ -49,6 +51,12 @@ CXX=g++
 
 
 %changelog
+* Sun Apr 14 2019 Guenter Bartsc <guenter@zamia.org> 0.22.0-1
+- update to 0.22.0
+
+* Tue Jul 17 2018 Vincent Batts <vbatts@fedoraproject.org> 0.15.2-1
+- update to 0.15.2
+
 * Tue Jul 17 2018 Vincent Batts <vbatts@fedoraproject.org> 0.15.2-1
 - update to 0.15.2
 

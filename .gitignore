@@ -199,14 +199,12 @@ centos-ai/kenlm/kenlm/
 
 centos-ai/kaldi-adapt-lm/kaldi-adapt-lm/
 
-centos-ai/bazel/bazel-0.15.2-dist.zip
+centos-ai/bazel-0.22.0/bazel-0.22.0-dist.zip
 
 centos-ai/protobuf/googlemock-1.7.0.tar.gz
 centos-ai/protobuf/googletest-1.7.0.tar.gz
 centos-ai/protobuf/protobuf-3.5.0.tar.gz
 centos-ai/protobuf/tmp/
-
-centos-ai/bazel/bazel-0.15.2.tar.gz
 
 centos-ai/tensorflow/tensorflow/
 centos-ai/tensorflow/v1.9.0.tar.gz
