@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PACKAGE=python-kaldi-asr
+PACKAGE=python-kaldiasr
 
 rm -f ~/repo/ai/centos/7/SRPMS/${PACKAGE}*
 rm ~/repo/ai/centos/7/x86_64/${PACKAGE}*

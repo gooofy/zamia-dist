@@ -41,8 +41,8 @@ CFLAGS="%{optflags}" %{__python2} %{py_setup} %{?py_setup_args} install -O1 --sk
 %global _docdir_fmt %{name}
 
 Name:           python-%{altname}
-Version:        0.4.1
-Release:        7%{?dist}
+Version:        0.5.2
+Release:        1%{?dist}
 Summary:        Some simple wrappers around Kaldi ASR intended to make using it as convenient as possible. 
 
 License:        Apache-2
@@ -96,6 +96,8 @@ py.test-%{python2_version} -v
 # %{python3_sitearch}/%{altname}/
 
 %changelog
+* Fri May 03 2019 Guenter Bartsch <guenter@zamia.org> - 0.5.2-1
+- new upstream version
 * Tue Jul 24 2018 Guenter Bartsch <guenter@zamia.org> - 0.4.1-7
 - kaldi-asr-devel build dependency added
 * Mon Jul 23 2018 Guenter Bartsch <guenter@zamia.org> - 0.4.1-5

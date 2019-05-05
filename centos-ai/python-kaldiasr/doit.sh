@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.4.1
+VERSION=0.5.2
 
 rm -rf py-kaldi-asr-${VERSION} py-kaldi-asr-${VERSION}.tar.gz
 
