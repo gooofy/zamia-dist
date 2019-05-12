@@ -1,13 +1,12 @@
 #!/bin/bash
 
-RELEASE=r20180905
-VERSION=20180905-1
+RELEASE=r20190328
+VERSION=20190328-1
 
 rm -rf kaldi-chain-zamia-speech-de/opt
 mkdir -p kaldi-chain-zamia-speech-de/opt/kaldi/model
 
 cp -r kaldi-generic-de-tdnn_f-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_f
-cp -r kaldi-generic-de-tdnn_sp-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_sp
 cp -r kaldi-generic-de-tdnn_250-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tdnn_250
 cp -r kaldi-generic-de-tri2b_chain-${RELEASE} kaldi-chain-zamia-speech-de/opt/kaldi/model/kaldi-generic-de-tri2b_chain
 
