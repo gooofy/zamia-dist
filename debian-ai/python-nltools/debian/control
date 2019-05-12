@@ -22,7 +22,7 @@ Description: A collection of basic python modules for spoken natural language pr
             X-SAMPA, X-ARPABET, ...)
  tts: abstraction layer towards using eSpeak NG, MaryTTS, SVOX Pico TTS or a
       remote TTS server and sequitur g2p
- asr: abstraction layer towards using kaldi-asr and pocketsphinx, models can be
+ asr: abstraction layer towards using kaldi-asr, models can be
       found here: http://goofy.zamia.org/voxforge/
  sequiturclient: g2p using sequitur
  pulseplayer: audio playback through pulseaudio
@@ -47,7 +47,7 @@ Description: A collection of basic python modules for spoken natural language pr
             X-SAMPA, X-ARPABET, ...)
  tts: abstraction layer towards using eSpeak NG, MaryTTS, SVOX Pico TTS or a
       remote TTS server and sequitur g2p
- asr: abstraction layer towards using kaldi-asr and pocketsphinx, models can be
+ asr: abstraction layer towards using kaldi-asr, models can be
       found here: http://goofy.zamia.org/voxforge/
  sequiturclient: g2p using sequitur
  pulseplayer: audio playback through pulseaudio
@@ -64,7 +64,7 @@ Description: A collection of basic python modules for spoken natural language pr
 Package: python-nltools-doc
 Architecture: all
 Section: doc
-Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}
 Description: A collection of basic python modules for spoken natural language processing (common documentation)
  A collection of abstraction layers and support functions that form the natural
  language processing foundation of the Zamia AI project:
@@ -72,7 +72,7 @@ Description: A collection of basic python modules for spoken natural language pr
             X-SAMPA, X-ARPABET, ..)
  tts: abstraction layer towards using eSpeak NG, MaryTTS, SVOX Pico TTS or a
       remote TTS server and sequitur g2p
- asr: abstraction layer towards using kaldi-asr and pocketsphinx, models can be
+ asr: abstraction layer towards using kaldi-asr, models can be
       found here: http://goofy.zamia.org/voxforge/
  sequiturclient: g2p using sequitur
  pulseplayer: audio playback through pulseaudio
