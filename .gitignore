@@ -17,11 +17,12 @@ raspbian-ai/python-espeakng/python3-espeakng*
 
 raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-chain-zamia-speech-de/
 raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_250-r*
-raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_sp-r*
+raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tdnn_f-r*
+raspbian-ai/kaldi-chain-zamia-speech-de/kaldi-generic-de-tri2b_chain-r*
 
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-chain-zamia-speech-en/
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_250-r*
-raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_sp-r*
+raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tdnn_f-r*
 raspbian-ai/kaldi-chain-zamia-speech-en/kaldi-generic-en-tri2b_chain-r*
 
 raspbian-ai/libkaldi-asr/kaldi
