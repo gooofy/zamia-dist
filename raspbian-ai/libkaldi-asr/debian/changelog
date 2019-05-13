@@ -1,8 +1,14 @@
+libkaldi-asr (5.4.248-2) unstable; urgency=medium
+
+  * fix symlinks
+
+ -- Guenter Bartsch <guenter@zamia.org>  Sun, 12 May 2019 16:58:11 +0200
+
 libkaldi-asr (5.4.248-1) unstable; urgency=medium
 
   * upstream release 5.4.248
 
- -- Guenter Bartsch <guenter@zamia.org>  Fri, 03 Oct 2019 00:01:02 +0200
+ -- Guenter Bartsch <guenter@zamia.org>  Fri, 03 May 2019 00:01:02 +0200
 
 libkaldi-asr (5.4-3) unstable; urgency=medium
 

@@ -44,6 +44,8 @@ override_dh_auto_install:
 	find opt -name "*.so*" -type f -print -exec chmod 644 \{\} \;
 	find opt -name "*.so*" -type f -print -exec strip \{\} \;
 	find opt -name "*.so*" -type f -print -exec chrpath -d \{\} \;
+	bash ../fix_kaldi_src_lib_symlinks.sh
+	# cd opt/kaldi/src/lib && for i in *.so ; do NEWLNK=`readlink $i | sed 's/\/home\/bofh\/build\/debian-ai\/libkaldi-asr\/libkaldi-asr-.......\/src/../g'` ; echo $NEWLNK ; rm $i ; ln -s $NEWLNK $i ; done
 	mkdir -p etc/ld.so.conf.d
 	mv debian/99-kaldi.conf etc/ld.so.conf.d/
 	mkdir -p usr/lib/pkgconfig
