@@ -1,3 +1,9 @@
+libkaldi-asr (5.4.248-3) unstable; urgency=medium
+
+  * another attempt to fix symlinks
+
+ -- Guenter Bartsch <guenter@zamia.org>  Tue, 14 May 2019 06:46:34 +0200
+
 libkaldi-asr (5.4.248-2) unstable; urgency=medium
 
   * fix symlinks
