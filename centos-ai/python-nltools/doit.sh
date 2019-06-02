@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.3.1
+VERSION=0.5.0
 
 rm -rf py-nltools-${VERSION} py-nltools-${VERSION}.tar.gz
 
