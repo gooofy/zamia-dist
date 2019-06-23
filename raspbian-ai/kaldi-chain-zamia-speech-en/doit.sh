@@ -1,7 +1,7 @@
 #!/bin/bash
 
-RELEASE=r20190227
-VERSION=20190227-1
+RELEASE=r20190609
+VERSION=20190609-1
 
 rm -rf kaldi-chain-zamia-speech-en/opt
 mkdir -p kaldi-chain-zamia-speech-en/opt/kaldi/model

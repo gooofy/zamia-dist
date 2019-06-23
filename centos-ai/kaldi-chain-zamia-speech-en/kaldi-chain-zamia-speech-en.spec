@@ -1,5 +1,5 @@
 Name:		kaldi-chain-zamia-speech-en
-Version:	20190227
+Version:	20190609
 Release:	1%{?dist}
 Group:		Applications/Multimedia
 License:	Apache License v 2.0
@@ -12,7 +12,8 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-build-%(%{__id_u} -n)
 # Sources.
 Source0:    kaldi-generic-en-tdnn_250-r%{version}.tar.xz
 Source1:    kaldi-generic-en-tdnn_f-r%{version}.tar.xz
-Source2:    kaldi-generic-en-tri2b_chain-r%{version}.tar.xz
+Source2:    kaldi-generic-en-tdnn_fl-r%{version}.tar.xz
+Source3:    kaldi-generic-en-tri2b_chain-r%{version}.tar.xz
 
 Requires:	kaldi-asr
 
@@ -24,6 +25,7 @@ This package provides English models from Zamia-Speech for the Kaldi Speech Reco
 tar xfJ %{SOURCE0} 
 tar xfJ %{SOURCE1} 
 tar xfJ %{SOURCE2} 
+tar xfJ %{SOURCE3} 
 
 %build
 # Nothing to build
@@ -37,7 +39,8 @@ tar xfJ %{SOURCE2}
 %{__mkdir_p} $RPM_BUILD_ROOT/opt/kaldi/model
 
 cp -rp kaldi-generic-en-tdnn_250-r%{version}        $RPM_BUILD_ROOT/opt/kaldi/model/kaldi-generic-en-tdnn_250
-cp -rp kaldi-generic-en-tdnn_f-r%{version}         $RPM_BUILD_ROOT/opt/kaldi/model/kaldi-generic-en-tdnn_f
+cp -rp kaldi-generic-en-tdnn_f-r%{version}          $RPM_BUILD_ROOT/opt/kaldi/model/kaldi-generic-en-tdnn_f
+cp -rp kaldi-generic-en-tdnn_fl-r%{version}         $RPM_BUILD_ROOT/opt/kaldi/model/kaldi-generic-en-tdnn_fl
 cp -rp kaldi-generic-en-tri2b_chain-r%{version}     $RPM_BUILD_ROOT/opt/kaldi/model/kaldi-generic-en-tri2b_chain
 
 %clean
@@ -59,6 +62,10 @@ cp -rp kaldi-generic-en-tri2b_chain-r%{version}     $RPM_BUILD_ROOT/opt/kaldi/mo
 %doc /opt/kaldi/model/kaldi-generic-en-tdnn_f/LICENSE
 %doc /opt/kaldi/model/kaldi-generic-en-tdnn_f/README.md
 %doc /opt/kaldi/model/kaldi-generic-en-tdnn_f/RESULTS.txt
+%doc /opt/kaldi/model/kaldi-generic-en-tdnn_fl/AUTHORS
+%doc /opt/kaldi/model/kaldi-generic-en-tdnn_fl/LICENSE
+%doc /opt/kaldi/model/kaldi-generic-en-tdnn_fl/README.md
+%doc /opt/kaldi/model/kaldi-generic-en-tdnn_fl/RESULTS.txt
 %doc /opt/kaldi/model/kaldi-generic-en-tri2b_chain/AUTHORS
 %doc /opt/kaldi/model/kaldi-generic-en-tri2b_chain/LICENSE
 %doc /opt/kaldi/model/kaldi-generic-en-tri2b_chain/README.md
@@ -76,11 +83,20 @@ cp -rp kaldi-generic-en-tri2b_chain-r%{version}     $RPM_BUILD_ROOT/opt/kaldi/mo
 /opt/kaldi/model/kaldi-generic-en-tdnn_f/ivectors_test_hires
 /opt/kaldi/model/kaldi-generic-en-tdnn_f/model
 
+/opt/kaldi/model/kaldi-generic-en-tdnn_fl/conf
+/opt/kaldi/model/kaldi-generic-en-tdnn_fl/data
+/opt/kaldi/model/kaldi-generic-en-tdnn_fl/extractor
+/opt/kaldi/model/kaldi-generic-en-tdnn_fl/ivectors_test_hires
+/opt/kaldi/model/kaldi-generic-en-tdnn_fl/model
+
 /opt/kaldi/model/kaldi-generic-en-tri2b_chain/conf
 /opt/kaldi/model/kaldi-generic-en-tri2b_chain/data
 /opt/kaldi/model/kaldi-generic-en-tri2b_chain/model
 
 %changelog
+* Thu Jun 20 2019 Guenter Bartsch <guenter@zamia.org> - 20190609-1
+- English Zamia-Speech Models r20190609
+
 * Sun May 05 2019 Guenter Bartsch <guenter@zamia.org> - 20190227-1
 - English Zamia-Speech Models r20190227
 
